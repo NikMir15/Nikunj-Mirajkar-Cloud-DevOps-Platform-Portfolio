@@ -1,0 +1,15 @@
+nikunj_portfolio/
+ ├── index.html
+ ├── about.html
+ ├── projects.html
+ ├── skills.html
+ ├── gaming.html
+ ├── contact.html
+ ├── css/
+ │     └── styles.css
+ ├── js/
+ │     └── main.js
+ └── assets/
+       ├── resume.txt
+       └── images/
+             └── thumb.svg
