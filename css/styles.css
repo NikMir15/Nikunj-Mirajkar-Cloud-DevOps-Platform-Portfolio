@@ -35,20 +35,9 @@ body {
     gap: 12px
 }
 
+/* Logo removed, but keeping class just in case needed later, or delete if preferred */
 .logo {
-    background: var(--panel);
-    padding: 10px 14px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6)
-}
-
-.logo .initial {
-    font-weight: 700;
-    color: var(--accent);
-    font-size: 18px
+    display: none;
 }
 
 /* --- Mobile Toggle Button Styling --- */
@@ -61,11 +50,12 @@ body {
     border-radius: 6px;
     cursor: pointer;
     margin-left: auto;
+    /* Pushes hamburger to right on mobile */
     display: none;
 }
 
 .nav {
-    margin-left: auto;
+    /* Removed margin-left: auto to keep links on the left */
     display: flex;
     gap: 10px;
 }
@@ -84,14 +74,17 @@ body {
     background: rgba(57, 255, 20, 0.02)
 }
 
-/* --- New Gaming Nav Link Styling --- */
+/* --- Gaming Nav Link Styling --- */
 .gaming-nav-link {
     color: var(--neon1);
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 6px;
     border: 1px solid var(--neon1);
-    margin-left: 15px;
+
+    /* Pushes this specific button to the far right */
+    margin-left: auto;
+
     transition: all 0.2s ease;
     box-shadow: 0 0 8px rgba(124, 77, 255, 0.3);
 }
@@ -101,7 +94,6 @@ body {
     background: rgba(124, 77, 255, 0.1);
     box-shadow: 0 0 15px rgba(124, 77, 255, 0.5);
 }
-
 
 /* --- Mobile Navigation Open State --- */
 .nav.is-open {
@@ -143,7 +135,6 @@ body {
     transform: scale(1.05);
     cursor: pointer;
 }
-
 
 .h1 {
     font-size: 28px;
@@ -262,24 +253,20 @@ a.button {
 
 /* Responsive */
 @media(max-width:880px) {
-
-    /* Show the hamburger button */
     .nav-toggle {
         display: block;
     }
 
-    /* Header must allow elements to wrap */
     .header {
         flex-wrap: wrap;
     }
 
-    /* Hide the navigation menu by default on mobile */
     .nav {
         display: none;
         margin-left: 0;
     }
 
-    /* Hides the desktop Gaming link on small screens */
+    /* Hide the desktop gaming button on mobile */
     .gaming-nav-link {
         display: none;
     }

@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <div class="container">
+        <header class="header">
             <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
             <nav class="nav" id="main-nav">
                 <a href="index.html">Home</a>
@@ -22,49 +24,35 @@
         <section class="card">
             <h1 class="h1">Projects</h1>
             <div class="projects-grid">
-
                 <div class="project card">
                     <h4>Distributed File Storage System</h4>
                     <p>Designed and implemented a highly available, multi-server file storage solution using
-                        microservices for fault tolerance and data redundancy.</p>
-
+                        microservices.</p>
                     <div class="terminal" style="margin:10px 0; font-size:13px; color:#c0ffc0">
-                        **Key Result:** Achieved 99.99% data availability using three replication factors across
-                        distinct nodes.
+                        **Key Result:** Achieved 99.99% data availability using three replication factors.
                     </div>
-
                     <div class="kv" style="margin-top:8px">
                         <div class="chip">Python (Flask)</div>
                         <div class="chip">Distributed Systems</div>
-                        <div class="chip">Load Balancing</div>
                         <div class="chip">AES Encryption</div>
                     </div>
-
                     <div style="margin-top:12px">
                         <a class="neon-btn" href="[LINK_TO_GITHUB]" style="font-size:14px; margin-right:8px">View
                             Code</a>
-                        <a class="neon-btn" href="[LINK_TO_LIVE_DEMO]" style="font-size:14px">Live Demo (If
-                            applicable)</a>
                     </div>
                 </div>
 
                 <div class="project card">
                     <h4>MQTT Real-Time Messaging App</h4>
-                    <p>Built a low-latency, bi-directional messaging system optimized for IoT devices using the
-                        lightweight MQTT protocol and a persistent message broker.</p>
-
+                    <p>Built a low-latency, bi-directional messaging system optimized for IoT devices.</p>
                     <div class="terminal" style="margin:10px 0; font-size:13px; color:#c0ffc0">
-                        **Key Result:** Processed 1000+ messages per second with sub-10ms latency for connected device
-                        updates.
+                        **Key Result:** Processed 1000+ messages per second with sub-10ms latency.
                     </div>
-
                     <div class="kv" style="margin-top:8px">
-                        <div class="chip">MQTT (Eclipse Paho)</div>
+                        <div class="chip">MQTT</div>
                         <div class="chip">Java</div>
                         <div class="chip">Real-Time Data</div>
-                        <div class="chip">Threading/Concurrency</div>
                     </div>
-
                     <div style="margin-top:12px">
                         <a class="neon-btn" href="[LINK_TO_GITHUB]" style="font-size:14px; margin-right:8px">View
                             Code</a>
@@ -73,28 +61,20 @@
 
                 <div class="project card">
                     <h4>CI/CD Pipeline for Containerized Apps</h4>
-                    <p>Automated the entire build, test, and deployment workflow for Dockerized applications,
-                        significantly reducing deployment time and human error.</p>
-
+                    <p>Automated build, test, and deployment workflow for Dockerized applications.</p>
                     <div class="terminal" style="margin:10px 0; font-size:13px; color:#c0ffc0">
-                        **Key Result:** Decreased time-to-deployment from 30 minutes (manual) to under 5 minutes
-                        (automated).
+                        **Key Result:** Decreased time-to-deployment from 30 mins to 5 mins.
                     </div>
-
                     <div class="kv" style="margin-top:8px">
-                        <div class="chip">GitHub Actions/Jenkins</div>
+                        <div class="chip">GitHub Actions</div>
                         <div class="chip">Docker</div>
                         <div class="chip">Azure DevOps</div>
-                        <div class="chip">Kubernetes (Deployment)</div>
                     </div>
-
                     <div style="margin-top:12px">
-                        <a class="neon-btn" href="[LINK_TO_GITHUB_CONFIG]" style="font-size:14px; margin-right:8px">View
+                        <a class="neon-btn" href="[LINK_TO_GITHUB]" style="font-size:14px; margin-right:8px">View
                             Config</a>
-                        <a class="neon-btn" href="[LINK_TO_DEMO_VIDEO]" style="font-size:14px">Demo Video</a>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -102,8 +82,8 @@
             <div>&lt;/&gt; Nikunj</div>
             <div style="color:var(--muted)">Projects & Experiments</div>
         </footer>
-
     </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
