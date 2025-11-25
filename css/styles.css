@@ -32,15 +32,12 @@ body {
 .header {
     display: flex;
     align-items: center;
-    gap: 12px
+    gap: 12px;
+    min-height: 60px;
+    /* Ensures header has height even without logo */
 }
 
-/* Logo removed, but keeping class just in case needed later, or delete if preferred */
-.logo {
-    display: none;
-}
-
-/* --- Mobile Toggle Button Styling --- */
+/* --- Mobile Toggle Button --- */
 .nav-toggle {
     background: none;
     border: 1px solid var(--accent);
@@ -49,13 +46,13 @@ body {
     padding: 4px 8px;
     border-radius: 6px;
     cursor: pointer;
+    /* On mobile, we push it to the right */
     margin-left: auto;
-    /* Pushes hamburger to right on mobile */
     display: none;
 }
 
 .nav {
-    /* Removed margin-left: auto to keep links on the left */
+    /* Links stay on the left */
     display: flex;
     gap: 10px;
 }
@@ -74,7 +71,7 @@ body {
     background: rgba(57, 255, 20, 0.02)
 }
 
-/* --- Gaming Nav Link Styling --- */
+/* --- Gaming Nav Link (Top Right) --- */
 .gaming-nav-link {
     color: var(--neon1);
     text-decoration: none;
@@ -82,7 +79,7 @@ body {
     border-radius: 6px;
     border: 1px solid var(--neon1);
 
-    /* Pushes this specific button to the far right */
+    /* Pushes this button to the far right */
     margin-left: auto;
 
     transition: all 0.2s ease;
@@ -266,7 +263,6 @@ a.button {
         margin-left: 0;
     }
 
-    /* Hide the desktop gaming button on mobile */
     .gaming-nav-link {
         display: none;
     }
