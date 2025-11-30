@@ -1,15 +1,11 @@
 :root {
-    /* Updated Design: Darker, sharper contrast */
     --bg: #050505;
     --panel: #0a0f14;
     --text: #e0f7fa;
     --muted: #8892b0;
     --accent: #00ff9d;
-    /* Sharper Neon Green */
     --neon1: #bd00ff;
-    /* Electric Purple */
     --neon2: #00e1ff;
-    /* Cyan */
     --neon3: #ff4da6;
 }
 
