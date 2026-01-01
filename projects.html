@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Projects — Nikunj Mirajkar</title>
-    <meta name="description"
-        content="Projects: Personal Finance App, Event Ticket System, and Distributed File Management." />
+    <meta name="description" content="Auto-synced GitHub projects of Nikunj Mirajkar." />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -26,72 +25,25 @@
 
         <section class="card">
             <h1 class="h1">Projects</h1>
-            <div class="projects-grid">
 
-                <div class="project card">
-                    <h4>Personal Finance Tracking & Budgeting App</h4>
-                    <p>Developed a cloud-ready finance manager with automated expense detection. Implemented receipt
-                        scanning and analytics dashboards.</p>
-                    <div class="terminal" style="margin:10px 0; font-size:13px; color:#c0ffc0">
-                        **Key Tech:** OCR & NLP for extraction, Containerized Architecture.
-                    </div>
-                    <div class="kv" style="margin-top:8px">
-                        <div class="chip">Docker</div>
-                        <div class="chip">Python</div>
-                        <div class="chip">OCR/NLP</div>
-                        <div class="chip">Full Stack</div>
-                    </div>
-                    <div style="margin-top:12px">
-                        <a class="neon-btn" href="https://github.com/NikMir15" target="_blank"
-                            style="font-size:14px; margin-right:8px">View Code</a>
-                    </div>
-                </div>
+            <!-- ✅ GitHub Auto Projects Section (ONLY) -->
+            <hr style="border-color: rgba(255,255,255,0.06); margin: 14px 0;" />
 
-                <div class="project card">
-                    <h4>Cloud-Based Event Ticket System</h4>
-                    <p>Built a user account creation and authentication portal. Designed workflows for ticket handling
-                        and issue management.</p>
-                    <div class="terminal" style="margin:10px 0; font-size:13px; color:#c0ffc0">
-                        **Architecture:** Service-oriented architecture using Docker Compose microservices.
-                    </div>
-                    <div class="kv" style="margin-top:8px">
-                        <div class="chip">Docker Compose</div>
-                        <div class="chip">Microservices</div>
-                        <div class="chip">Cloud Tech</div>
-                    </div>
-                    <div style="margin-top:12px">
-                        <a class="neon-btn" href="https://github.com/NikMir15" target="_blank"
-                            style="font-size:14px; margin-right:8px">View Code</a>
-                    </div>
-                </div>
+            <h3 style="margin: 0; color: var(--text);">Latest from GitHub</h3>
+            <p id="github-status" style="color: var(--muted); margin-top: 6px;">Loading…</p>
 
-                <div class="project card">
-                    <h4>Distributed File Management System</h4>
-                    <p>Built a secure system for file upload, edit, and encryption with multi-server storage. Delivered
-                        full CRUD operations.</p>
-                    <div class="terminal" style="margin:10px 0; font-size:13px; color:#c0ffc0">
-                        **Key Tech:** JavaFX, MQTT for event-driven comms, SQLite, and Docker.
-                    </div>
-                    <div class="kv" style="margin-top:8px">
-                        <div class="chip">JavaFX</div>
-                        <div class="chip">MQTT</div>
-                        <div class="chip">SQLite</div>
-                        <div class="chip">REST/MVC</div>
-                    </div>
-                    <div style="margin-top:12px">
-                        <a class="neon-btn" href="https://github.com/NikMir15" target="_blank"
-                            style="font-size:14px; margin-right:8px">View Code</a>
-                    </div>
-                </div>
+            <div id="github-repos" class="projects-grid"></div>
 
-            </div>
+            <hr style="border-color: rgba(255,255,255,0.06); margin: 14px 0;" />
         </section>
 
         <footer class="footer">
-            <div style="color:var(--muted)">Projects & Experiments</div>
+            <div style="color:var(--muted)">Projects auto-synced from GitHub</div>
         </footer>
     </div>
+
     <script src="js/main.js"></script>
+    <script src="js/github-projects.js"></script>
 </body>
 
 </html>
