@@ -12,4 +12,9 @@ HTML, CSS, JavaScript
 - Sections for projects, skills, and contact details
 
 ## How to Run
-Link: https://nikunjmirajkar.com/
+
+Live: https://nikunjmirajkar.com/
+
+Or run locally:
+```bash
+python3 -m http.server 8000
