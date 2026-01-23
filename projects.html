@@ -1,41 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Nikunj Mirajkar</title>
-  <meta name="description" content="Projects by Nikunj Mirajkar — live GitHub repositories fetched automatically." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://nikunjmirajkar.com/projects.html" />
-  <link rel="stylesheet" href="/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Nikunj Mirajkar</title>
+  <meta name="description" content="Nikunj Mirajkar portfolio projects auto-synced from GitHub." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
+  <div class="container">
+    <header class="header">
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="summary.html">Summary</a>
+        <a href="projects.html">Portfolio</a>
+        <a href="skills.html">Skills</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-  <nav class="navbar">
-    <div class="logo">Nikunj</div>
-    <ul class="nav-links" id="main-nav">
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a class="active" href="/projects.html">Projects</a></li>
-      <li><a href="/skills.html">Skills</a></li>
-      <li><a href="/gaming.html">Gaming</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
-    <div class="menu-toggle nav-toggle">&#9776;</div>
-  </nav>
+    <section class="card">
+      <h1 class="h1">Portfolio</h1>
 
-  <header class="page-hero" data-stagger="container">
-    <h1 class="animate">Projects</h1>
-    <p class="animate">Fetched live from my GitHub profile</p>
-  </header>
+      <h3 style="margin: 10px 0 0;">Latest from GitHub</h3>
+      <p id="github-status" style="color: var(--muted); margin-top: 6px;">Loading…</p>
+      <div id="github-repos" class="projects-grid"></div>
+    </section>
 
-  <main class="container">
-    <div class="projects-grid" id="github-projects"></div>
-  </main>
+    <footer class="footer">
+      <div style="color:var(--muted)">Auto-synced from GitHub</div>
+    </footer>
+  </div>
 
-  <footer>&copy; 2026 Nikunj Mirajkar. All rights reserved.</footer>
-
-  <script src="/js/main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/github-projects.js"></script>
 </body>
 </html>

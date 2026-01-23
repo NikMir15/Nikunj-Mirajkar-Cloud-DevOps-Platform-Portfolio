@@ -51,8 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   async function getSmartDescription(repo) {
+    // 1) Prefer GitHub "About" description
     if (repo.description && repo.description.trim()) return repo.description.trim();
 
+    // 2) If missing, try to get from README
     const candidates = ["README.md", "readme.md"];
     for (const file of candidates) {
       const url = `https://raw.githubusercontent.com/${username}/${repo.name}/${repo.default_branch}/${file}`;
@@ -67,16 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    return ""; // no description at all -> we’ll hide the paragraph
+    // 3) No description -> hide this repo from the portfolio list
+    return "";
   }
 
   // Build "Key Tech" chips automatically
   const buildTechChips = (repo) => {
     const chips = [];
-
     if (repo.language) chips.push(repo.language);
 
-    // Quick heuristics based on repo name (optional but helpful)
     const name = (repo.name || "").toLowerCase();
     if (name.includes("docker")) chips.push("Docker");
     if (name.includes("k8") || name.includes("kube")) chips.push("Kubernetes");
@@ -85,11 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (name.includes("devops")) chips.push("DevOps");
     if (name.includes("finance")) chips.push("OCR/NLP");
 
-    // Remove duplicates
     return [...new Set(chips)].slice(0, 6);
   };
 
   const repoCard = (repo, desc) => {
+    // ✅ If no description, don't render card
+    if (!desc || !desc.trim()) return "";
+
     const stars = typeof repo.stargazers_count === "number" ? repo.stargazers_count : 0;
     const forks = typeof repo.forks_count === "number" ? repo.forks_count : 0;
 
@@ -106,14 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>`
       : "";
 
-    const descHtml = desc
-      ? `<p style="color:var(--text)">${escapeHtml(desc)}</p>`
-      : `<p style="color:var(--muted)">Add a GitHub “About” description to show it here.</p>`;
-
     return `
       <div class="project card reveal" style="opacity:0">
         <h4>${escapeHtml(repo.name)}</h4>
-        ${descHtml}
+        <p style="color:var(--text)">${escapeHtml(desc)}</p>
 
         ${terminalHtml}
 
@@ -136,7 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
   async function loadRepos() {
     status.textContent = "Loading GitHub repos…";
 
-    // If opened via file://, fetch can be blocked
     if (location.protocol === "file:") {
       status.textContent = "Tip: Run a local server (http://localhost) to load GitHub repos.";
       return;
@@ -156,28 +154,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let repos = await res.json();
 
-      // Clean list
       repos = repos
         .filter(r => !r.fork && !r.archived)
-        .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
-        .slice(0, maxToShow);
+        .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 
-      if (!repos.length) {
-        status.textContent = "No public repos found.";
+      const cards = [];
+
+      for (const repo of repos) {
+        const desc = await getSmartDescription(repo);
+        const card = repoCard(repo, desc);
+        if (card) cards.push(card); // ✅ Only push repos with descriptions
+        if (cards.length >= maxToShow) break; // ✅ stop once we have enough visible cards
+      }
+
+      if (!cards.length) {
+        status.textContent = "No repos with descriptions found. Add descriptions in GitHub repo About section.";
+        grid.innerHTML = "";
         return;
       }
 
-      const cards = [];
-      for (const repo of repos) {
-        const desc = await getSmartDescription(repo);
-        cards.push(repoCard(repo, desc));
-      }
-
       grid.innerHTML = cards.join("");
-      status.textContent = `Auto-synced from GitHub: showing ${repos.length} repos (@${username})`;
+      status.textContent = `Auto-synced from GitHub: showing ${cards.length} repos (@${username})`;
 
       const reveals = grid.querySelectorAll(".reveal");
       reveals.forEach((el, i) => setTimeout(() => (el.style.opacity = 1), i * 120));
+
     } catch (err) {
       console.error(err);
       status.textContent = "Couldn’t load GitHub repos (network/CORS).";
