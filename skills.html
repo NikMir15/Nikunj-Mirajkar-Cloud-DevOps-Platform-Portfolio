@@ -1,99 +1,95 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skills | Nikunj Mirajkar</title>
-  <meta name="description" content="Cloud & DevOps skills: AWS, Terraform, Docker, CI/CD, Linux, networking and APIs." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://nikunjmirajkar.com/skills.html" />
-  <link rel="stylesheet" href="/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills — Nikunj Mirajkar</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
+  <div class="container">
+    <header class="header">
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="summary.html">Summary</a>
+        <a href="projects.html">Portfolio</a>
+        <a href="skills.html">Skills</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-  <nav class="navbar">
-    <div class="logo">Nikunj</div>
-    <ul class="nav-links" id="main-nav">
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/projects.html">Projects</a></li>
-      <li><a class="active" href="/skills.html">Skills</a></li>
-      <li><a href="/gaming.html">Gaming</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
-    <div class="menu-toggle nav-toggle">&#9776;</div>
-  </nav>
+    <section class="card">
+      <h1 class="h1">Technical Skills</h1>
 
-  <header class="page-hero" data-stagger="container">
-    <h1 class="animate">Skills</h1>
-    <p class="animate">Cloud • DevOps • Platform Engineering • Backend • Networking</p>
-    <div class="badge-row animate">
-      <span class="skill-badge">AWS</span>
-      <span class="skill-badge">Terraform</span>
-      <span class="skill-badge">Docker</span>
-      <span class="skill-badge">GitHub Actions</span>
-      <span class="skill-badge">Linux</span>
-      <span class="skill-badge">REST APIs</span>
-    </div>
-  </header>
-
-  <main class="skills-wrap" data-stagger="container">
-    <section class="skills-grid">
-      <div class="skill-card animate">
-        <h3>Cloud & Infrastructure</h3>
-        <ul>
-          <li>AWS: EC2, VPC, Security Groups, ALB, Route 53</li>
-          <li>Networking: subnets, routing, IGW, CIDR, /32 SSH restriction</li>
-          <li>Azure Fundamentals (AZ-900)</li>
-        </ul>
+      <div class="card">
+        <h3 style="color:var(--accent)">Cloud & Infrastructure</h3>
+        <div class="terminal">
+          AWS (EC2, Application Load Balancer, IAM, Route 53, VPC, Security Groups)<br>
+          Internet Gateway & Route Tables<br>
+          Terraform (Infrastructure as Code)<br>
+          Microsoft Azure (Fundamentals)
+        </div>
       </div>
 
-      <div class="skill-card animate">
-        <h3>DevOps & CI/CD</h3>
-        <ul>
-          <li>Docker & Docker Compose</li>
-          <li>GitHub Actions pipelines</li>
-          <li>Automation mindset</li>
-        </ul>
+      <div class="card">
+        <h3 style="color:var(--accent)">DevOps & CI/CD</h3>
+        <div class="terminal">
+          Docker & Docker Compose<br>
+          GitHub Actions (CI/CD Pipelines)<br>
+          Terraform CLI (init, plan, apply, destroy)
+        </div>
       </div>
 
-      <div class="skill-card animate">
-        <h3>Infrastructure as Code</h3>
-        <ul>
-          <li>Terraform: init / plan / apply / destroy</li>
-          <li>Variables, outputs, clean structure</li>
-          <li>Provisioning VPC + EC2 + user-data automation</li>
-        </ul>
+      <div class="card">
+        <h3 style="color:var(--accent)">Programming</h3>
+        <div class="terminal">
+          Python<br>
+          Java<br>
+          Shell Scripting (Linux)
+        </div>
       </div>
 
-      <div class="skill-card animate">
-        <h3>Backend & APIs</h3>
-        <ul>
-          <li>REST APIs, microservices communication</li>
-          <li>Python, Java</li>
-          <li>Routing & gateway fundamentals</li>
-        </ul>
+      <div class="card">
+        <h3 style="color:var(--accent)">Backend & APIs</h3>
+        <div class="terminal">
+          REST API Development<br>
+          MVC Architecture<br>
+          Backend Service Design
+        </div>
       </div>
 
-      <div class="skill-card animate">
-        <h3>Databases & Messaging</h3>
-        <ul>
-          <li>SQLite, MySQL</li>
-          <li>MQTT event-driven messaging</li>
-        </ul>
+      <div class="card">
+        <h3 style="color:var(--accent)">Databases & Messaging</h3>
+        <div class="terminal">
+          MySQL<br>
+          SQLite<br>
+          MQTT (Event-Driven Communication)
+        </div>
       </div>
 
-      <div class="skill-card animate">
-        <h3>Security & Reliability</h3>
-        <ul>
-          <li>HTTPS routing, CORS troubleshooting</li>
-          <li>Restricted SSH access</li>
-          <li>Logs/metrics mindset</li>
-        </ul>
+      <div class="card">
+        <h3 style="color:var(--accent)">OS & Tools</h3>
+        <div class="terminal">
+          Linux (Ubuntu)<br>
+          Git & GitHub<br>
+          Visual Studio Code
+        </div>
       </div>
 
+      <div class="card">
+        <h3 style="color:var(--accent)">Security & Networking</h3>
+        <div class="terminal">
+          HTTPS & CORS<br>
+          Load Balancing<br>
+          IP-Restricted SSH Access<br>
+          CIDR Notation (/32)<br>
+          Public & Private Subnets<br>
+          Cloud Networking Fundamentals
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
