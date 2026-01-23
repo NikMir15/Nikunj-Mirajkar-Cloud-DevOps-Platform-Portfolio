@@ -1,17 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skills | Nikunj Mirajkar</title>
-
-  <meta name="description" content="Cloud & DevOps skills including AWS, Terraform, Docker, CI/CD, Linux, SQL, PostgreSQL, MySQL, networking and backend systems." />
+  <meta name="description" content="Cloud & DevOps skills: AWS, Terraform, Docker, CI/CD, Linux, networking and APIs." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://nikunjmirajkar.com/skills.html" />
-
   <link rel="stylesheet" href="/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <nav class="navbar">
@@ -29,29 +28,24 @@
 
   <header class="page-hero" data-stagger="container">
     <h1 class="animate">Skills</h1>
-    <p class="animate">Cloud • DevOps • Platform Engineering • Databases • Backend</p>
-
+    <p class="animate">Cloud • DevOps • Platform Engineering • Backend • Networking</p>
     <div class="badge-row animate">
       <span class="skill-badge">AWS</span>
       <span class="skill-badge">Terraform</span>
       <span class="skill-badge">Docker</span>
       <span class="skill-badge">GitHub Actions</span>
       <span class="skill-badge">Linux</span>
-      <span class="skill-badge">SQL</span>
-      <span class="skill-badge">PostgreSQL</span>
-      <span class="skill-badge">MySQL</span>
       <span class="skill-badge">REST APIs</span>
     </div>
   </header>
 
   <main class="skills-wrap" data-stagger="container">
     <section class="skills-grid">
-
       <div class="skill-card animate">
         <h3>Cloud & Infrastructure</h3>
         <ul>
-          <li>AWS: EC2, VPC, ALB, Security Groups, Route 53</li>
-          <li>Networking: subnets, routing tables, CIDR, IGW</li>
+          <li>AWS: EC2, VPC, Security Groups, ALB, Route 53</li>
+          <li>Networking: subnets, routing, IGW, CIDR, /32 SSH restriction</li>
           <li>Azure Fundamentals (AZ-900)</li>
         </ul>
       </div>
@@ -61,52 +55,52 @@
         <ul>
           <li>Docker & Docker Compose</li>
           <li>GitHub Actions pipelines</li>
-          <li>CI/CD automation and deployment workflows</li>
+          <li>Automation mindset</li>
         </ul>
       </div>
 
       <div class="skill-card animate">
         <h3>Infrastructure as Code</h3>
         <ul>
-          <li>Terraform: init, plan, apply, destroy</li>
-          <li>Reusable modules, variables, outputs</li>
-          <li>Provisioning cloud infrastructure programmatically</li>
-        </ul>
-      </div>
-
-      <div class="skill-card animate">
-        <h3>Databases & SQL</h3>
-        <ul>
-          <li>SQL fundamentals: queries, joins, indexes</li>
-          <li>PostgreSQL and MySQL</li>
-          <li>Schema design and relational data modeling</li>
-          <li>SQLite for lightweight and embedded use cases</li>
+          <li>Terraform: init / plan / apply / destroy</li>
+          <li>Variables, outputs, clean structure</li>
+          <li>Provisioning VPC + EC2 + user-data automation</li>
         </ul>
       </div>
 
       <div class="skill-card animate">
         <h3>Backend & APIs</h3>
         <ul>
-          <li>RESTful API design and integration</li>
-          <li>Python and Java backend services</li>
-          <li>Service-to-service communication</li>
+          <li>REST APIs, microservices communication</li>
+          <li>Python, Java</li>
+          <li>Routing & gateway fundamentals</li>
+        </ul>
+      </div>
+
+      <div class="skill-card animate">
+        <h3>Databases & Messaging</h3>
+        <ul>
+          <li>SQLite, MySQL</li>
+          <li>MQTT event-driven messaging</li>
         </ul>
       </div>
 
       <div class="skill-card animate">
         <h3>Security & Reliability</h3>
         <ul>
-          <li>HTTPS routing and CORS troubleshooting</li>
-          <li>IP-restricted SSH access</li>
-          <li>Basic logging and observability mindset</li>
+          <li>HTTPS routing, CORS troubleshooting</li>
+          <li>Restricted SSH access</li>
+          <li>Logs/metrics mindset</li>
         </ul>
       </div>
 
     </section>
-  </main>
 
-  <footer>&copy; 2026 Nikunj Mirajkar. All rights reserved.</footer>
+    <footer class="footer">
+      <div style="color:var(--muted)">Skills</div>
+    </footer>
+  </div>
 
-  <script src="/js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
