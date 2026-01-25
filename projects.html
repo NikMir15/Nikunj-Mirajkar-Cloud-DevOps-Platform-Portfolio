@@ -4,13 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio — Nikunj Mirajkar</title>
-  <meta name="description" content="Nikunj Mirajkar portfolio projects auto-synced from GitHub." />
+  <meta name="description" content="Featured Cloud/DevOps projects and auto-synced GitHub repositories." />
+  <link rel="canonical" href="https://nikunjmirajkar.com/projects.html" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
   <div class="container">
     <header class="header">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">Nikunj Mirajkar</span>
+      </div>
+
       <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
       <nav class="nav" id="main-nav">
         <a href="index.html">Home</a>
@@ -24,14 +30,74 @@
 
     <section class="card">
       <h1 class="h1">Portfolio</h1>
+      <p class="muted">Featured projects (always visible), plus GitHub auto-synced repos below.</p>
 
-      <h3 style="margin: 10px 0 0;">Latest from GitHub</h3>
-      <p id="github-status" style="color: var(--muted); margin-top: 6px;">Loading…</p>
-      <div id="github-repos" class="projects-grid"></div>
+      <!-- Featured Projects -->
+      <h2 class="h2">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project card">
+          <h3 class="h3">Personal Finance Tracking & Budgeting App</h3>
+          <p class="muted">
+            Cloud-ready finance manager with automated expense entry using OCR/NLP ideas and analytics dashboards.
+          </p>
+          <div class="terminal"><strong>Key Tech:</strong> Python • APIs • Data Processing • Cloud-ready Design</div>
+          <div class="kv">
+            <div class="chip">Python</div>
+            <div class="chip">Backend</div>
+            <div class="chip">OCR/NLP</div>
+          </div>
+          <div class="btn-row">
+            <a class="neon-btn" href="https://github.com/NikMir15" target="_blank" rel="noopener">View Code</a>
+          </div>
+        </div>
+
+        <div class="project card">
+          <h3 class="h3">Cloud-Based Event Ticket System</h3>
+          <p class="muted">
+            Account creation and authentication portal with workflows for ticket handling and issue management.
+          </p>
+          <div class="terminal"><strong>Key Tech:</strong> Java • REST • Microservices Concepts</div>
+          <div class="kv">
+            <div class="chip">Java</div>
+            <div class="chip">REST</div>
+            <div class="chip">Services</div>
+          </div>
+          <div class="btn-row">
+            <a class="neon-btn" href="https://github.com/NikMir15" target="_blank" rel="noopener">View Code</a>
+          </div>
+        </div>
+
+        <div class="project card">
+          <h3 class="h3">Distributed File Management System</h3>
+          <p class="muted">
+            Secure file upload, edit, encryption and multi-server storage with CRUD operations.
+          </p>
+          <div class="terminal"><strong>Key Tech:</strong> JavaFX • MQTT • SQLite • Docker</div>
+          <div class="kv">
+            <div class="chip">JavaFX</div>
+            <div class="chip">MQTT</div>
+            <div class="chip">SQLite</div>
+            <div class="chip">Docker</div>
+          </div>
+          <div class="btn-row">
+            <a class="neon-btn" href="https://github.com/NikMir15" target="_blank" rel="noopener">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Auto-synced GitHub -->
+      <h2 class="h2" style="margin-top:22px">More Projects (Auto-synced from GitHub)</h2>
+      <div class="terminal">
+        If GitHub is blocked/rate-limited, use:
+        <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">View all repos on GitHub</a>
+      </div>
+
+      <div id="github-status" class="muted" style="margin-top:10px">Loading GitHub repos…</div>
+      <div id="github-repos" class="projects-grid" style="margin-top:12px"></div>
     </section>
 
     <footer class="footer">
-      <div style="color:var(--muted)">Auto-synced from GitHub</div>
+      <div class="muted">Portfolio</div>
     </footer>
   </div>
 

@@ -3,57 +3,276 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nikunj Mirajkar — Cloud & DevOps Portfolio</title>
-  <meta name="description" content="Nikunj Mirajkar — Cloud & DevOps portfolio with GitHub auto-synced projects." />
+  <title>Nikunj Mirajkar — Cloud & DevOps (Matrix)</title>
+  <meta name="description" content="Single-page Matrix-themed Cloud & DevOps portfolio of Nikunj Mirajkar (AZ-900). AWS, Terraform, Docker, GitHub Actions, Linux, Python." />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <div class="container">
-    <header class="header">
-      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-      <nav class="nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="summary.html">Summary</a>
-        <a href="projects.html">Portfolio</a>
-        <a href="skills.html">Skills</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+  <!-- Matrix background -->
+  <canvas id="matrix"></canvas>
+  <div class="matrix-overlay"></div>
 
-    <section class="card hero-card">
-      <div class="avatar-container">
-        <img src="img/profile.jpg" alt="Nikunj Mirajkar" class="avatar">
-      </div>
+  <div class="page">
+    <div class="container">
 
-      <h1 class="h1">&gt; hi — i'm Nikunj
-        <span style="color:rgba(234,242,255,0.75);font-size:14px">· Cloud / DevOps</span>
-      </h1>
+      <!-- Header -->
+      <header class="header">
+        <div class="brand">
+          <span class="brand-badge"></span>
+          <div class="brand-text">
+            <div class="brand-name">nikunj_portfolio.exe</div>
+            <div class="brand-sub">status: online ✓</div>
+          </div>
+        </div>
 
-      <div class="kv">
-        <div class="chip">Azure</div>
-        <div class="chip">CI/CD</div>
-        <div class="chip">Linux</div>
-        <div class="chip">Python</div>
-        <div class="chip">GitHub Actions</div>
-      </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
 
-      <div class="card terminal" style="margin-top:12px">
-        Building cloud-ready solutions, automation workflows, and showcasing real projects through a GitHub auto-synced portfolio.
-      </div>
+        <!-- Single-page nav (anchors) -->
+        <nav class="nav" id="main-nav">
+          <a href="#home">Home</a>
+          <a href="#summary">Summary</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#skills">Skills</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-      <div style="margin-top:12px">
-        <a class="neon-btn" href="projects.html">View Portfolio</a>
-        <a class="neon-btn" href="contact.html" style="margin-left:8px">Contact</a>
-      </div>
-    </section>
+      <!-- HOME -->
+      <section id="home" class="card">
+        <div class="hero">
+          <div class="hero-left">
+            <h1 class="h1">NIKUNJ MIRAJKAR</h1>
+            <p class="muted hero-sub">
+              Cloud & DevOps Graduate (AZ-900) • AWS • Terraform • Docker • GitHub Actions • Linux • Python
+            </p>
 
-    <footer class="footer">
-      <div style="margin-left:auto;">© Nikunj Mirajkar</div>
-    </footer>
+            <div class="terminal">
+              console.log("Initializing profile...");<br>
+              Loading: CI/CD automation, infrastructure work, and cloud-ready projects.<br>
+              <strong>Location:</strong> Nottingham, UK
+            </div>
+
+            <div class="kv">
+              <div class="chip">AWS</div>
+              <div class="chip">Terraform</div>
+              <div class="chip">Docker</div>
+              <div class="chip">GitHub Actions</div>
+              <div class="chip">Linux</div>
+              <div class="chip">Python</div>
+              <div class="chip">Azure (AZ-900)</div>
+            </div>
+
+            <div class="cta-row">
+              <a class="neon-btn" href="#portfolio">View Portfolio</a>
+              <a class="neon-btn" href="Assets/resume.txt" target="_blank" rel="noopener">Download CV</a>
+              <a class="neon-btn" href="#contact">Contact</a>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <!-- Uses your existing profile image -->
+            <img class="hero-image" src="img/profile.jpg" alt="Nikunj Mirajkar" />
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section id="summary" class="card">
+        <h2 class="h2">Summary</h2>
+
+        <div class="terminal">
+          Cloud & DevOps graduate with hands-on experience in AWS fundamentals, Terraform IaC, Docker,
+          GitHub Actions CI/CD, Linux, and backend/API development. I build practical projects focused
+          on automation, reliability, and scalable cloud-ready systems.
+        </div>
+
+        <div class="grid-2">
+          <div class="card soft">
+            <h3 class="h3">Highlights</h3>
+            <ul class="list">
+              <li>Built and documented multiple cloud/devops projects with CI/CD and infra automation.</li>
+              <li>Strong foundation in cloud networking (VPC, subnets, routing, security groups, ALB, Route 53).</li>
+              <li>AZ-900 certified; actively seeking entry-level Cloud/DevOps roles in the UK.</li>
+            </ul>
+          </div>
+
+          <div class="card soft">
+            <h3 class="h3">Quick Links</h3>
+            <div class="terminal">
+              GitHub: <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">github.com/NikMir15</a><br><br>
+              LinkedIn: <a class="link" href="https://www.linkedin.com/in/nikunjmirajkar/" target="_blank" rel="noopener">linkedin.com/in/nikunjmirajkar</a><br><br>
+              CV: <a class="link" href="Assets/resume.txt" target="_blank" rel="noopener">Download</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="card">
+        <h2 class="h2">Portfolio</h2>
+        <p class="muted">Featured projects + auto-synced GitHub repos (only repos with descriptions are shown).</p>
+
+        <!-- Featured -->
+        <h3 class="h3" style="margin-top:14px">Featured Projects</h3>
+        <div class="projects-grid">
+          <div class="project card soft">
+            <h3 class="h3">Distributed File Management System</h3>
+            <p class="muted">Secure file upload, edit, encryption and multi-server storage with CRUD operations.</p>
+            <div class="terminal"><strong>Key Tech:</strong> JavaFX • MQTT • SQLite • Docker</div>
+          </div>
+
+          <div class="project card soft">
+            <h3 class="h3">Personal Finance Tracking & Budgeting App</h3>
+            <p class="muted">Cloud-ready finance manager concept with automated expense entry and analytics dashboards.</p>
+            <div class="terminal"><strong>Key Tech:</strong> Python • APIs • Data Processing</div>
+          </div>
+
+          <div class="project card soft">
+            <h3 class="h3">Cloud/DevOps Project Labs</h3>
+            <p class="muted">Infrastructure, automation, and deployment practice projects to showcase practical skills.</p>
+            <div class="terminal"><strong>Key Tech:</strong> AWS • Terraform • CI/CD • Linux</div>
+          </div>
+        </div>
+
+        <!-- Auto GitHub -->
+        <div class="terminal" style="margin-top:16px">
+          If GitHub is rate-limited/blocked: <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">View all repos on GitHub</a>
+        </div>
+
+        <div id="github-status" class="muted" style="margin-top:10px">Loading GitHub repos…</div>
+        <div id="github-repos" class="projects-grid" style="margin-top:12px"></div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="card">
+        <h2 class="h2">Skills</h2>
+
+        <div class="kv" style="margin-top:6px">
+          <div class="chip">AWS</div>
+          <div class="chip">Terraform</div>
+          <div class="chip">Docker</div>
+          <div class="chip">GitHub Actions</div>
+          <div class="chip">Linux</div>
+          <div class="chip">Python</div>
+          <div class="chip">Java</div>
+          <div class="chip">MySQL</div>
+          <div class="chip">MQTT</div>
+          <div class="chip">Azure (Fundamentals)</div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card soft">
+            <h3 class="h3">Cloud & Infrastructure</h3>
+            <div class="terminal">
+              AWS (EC2, ALB, IAM, Route 53, VPC, Security Groups)<br>
+              Internet Gateway & Route Tables<br>
+              Microsoft Azure (Fundamentals)
+            </div>
+          </div>
+
+          <div class="card soft">
+            <h3 class="h3">DevOps & CI/CD</h3>
+            <div class="terminal">
+              Docker & Docker Compose<br>
+              GitHub Actions (CI/CD Pipelines)<br>
+              Terraform CLI (init, plan, apply, destroy)
+            </div>
+          </div>
+
+          <div class="card soft">
+            <h3 class="h3">Programming</h3>
+            <div class="terminal">
+              Python • Java • Shell scripting (Linux)
+            </div>
+          </div>
+
+          <div class="card soft">
+            <h3 class="h3">Backend & Data</h3>
+            <div class="terminal">
+              REST API Development • MVC Architecture<br>
+              MySQL • SQLite • MQTT messaging
+            </div>
+          </div>
+
+          <div class="card soft">
+            <h3 class="h3">Security & Networking</h3>
+            <div class="terminal">
+              HTTPS & CORS • Load Balancing<br>
+              IP-restricted SSH / CIDR (/32)<br>
+              Public & Private Subnets (cloud networking fundamentals)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certifications" class="card">
+        <h2 class="h2">Certifications</h2>
+
+        <div class="card soft">
+          <h3 class="h3">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+          <div class="terminal">
+            Issued: 2025<br><br>
+            🔗 <a class="link" href="https://www.credly.com/earner/earned/badge/744eed9d-8a6a-4895-b4ea-1fd875c58ef8" target="_blank" rel="noopener">
+              View Credential on Credly
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="card">
+        <h2 class="h2">Contact</h2>
+
+        <div class="grid-2">
+          <div class="card soft">
+            <h3 class="h3">Email</h3>
+            <div class="terminal">
+              <a class="link" href="mailto:nikunjmir1506@gmail.com">nikunjmir1506@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="card soft">
+            <h3 class="h3">LinkedIn</h3>
+            <div class="terminal">
+              <a class="link" href="https://www.linkedin.com/in/nikunjmirajkar/" target="_blank" rel="noopener">
+                linkedin.com/in/nikunjmirajkar
+              </a>
+            </div>
+          </div>
+
+          <div class="card soft">
+            <h3 class="h3">GitHub</h3>
+            <div class="terminal">
+              <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">
+                github.com/NikMir15
+              </a>
+            </div>
+          </div>
+
+          <div class="card soft">
+            <h3 class="h3">Location</h3>
+            <div class="terminal">Nottingham, UK</div>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="neon-btn" href="Assets/resume.txt" target="_blank" rel="noopener">Download CV</a>
+          <a class="neon-btn" href="#portfolio">Back to Portfolio</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="muted">© <span id="year"></span> Nikunj Mirajkar</div>
+        <div class="muted">theme: matrix • single-page</div>
+      </footer>
+
+    </div>
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/github-projects.js"></script>
 </body>
 </html>
