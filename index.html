@@ -1,223 +1,242 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nikunj Mirajkar — Cloud & DevOps (Matrix)</title>
-  <meta name="description" content="Single-page Matrix-themed Cloud & DevOps portfolio of Nikunj Mirajkar (AZ-900). AWS, Terraform, Docker, GitHub Actions, Linux, Python." />
-  <link rel="stylesheet" href="css/styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Nikunj Mirajkar | Cloud & DevOps Engineer</title>
+<meta name="description" content="Cloud & DevOps portfolio of Nikunj Mirajkar. AWS, Terraform, Docker, CI/CD, Linux, GitHub Actions, Azure Fundamentals." />
+
+<link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <!-- Matrix background -->
-  <canvas id="matrix"></canvas>
-  <div class="matrix-overlay"></div>
 
-  <div class="page">
-    <div class="container">
+<!-- MATRIX BACKGROUND -->
+<canvas id="matrix"></canvas>
+<div class="matrix-overlay"></div>
 
-      <!-- Header -->
-      <header class="header">
-        <div class="brand">
-          <span class="brand-badge"></span>
-          <div class="brand-text">
-            <div class="brand-name">nikunj_portfolio.exe</div>
-            <div class="brand-sub">status: online ✓</div>
-          </div>
-        </div>
+<div class="page">
+<div class="container">
 
-        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-
-        <nav class="nav" id="main-nav">
-          <a href="#home">Home</a>
-          <a href="#summary">Summary</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#skills">Skills</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
-
-      <!-- HOME -->
-      <section id="home" class="card">
-        <div class="hero">
-          <div class="hero-left">
-            <h1 class="h1">NIKUNJ MIRAJKAR</h1>
-            <p class="muted hero-sub">
-              Cloud & DevOps Graduate (AZ-900) • AWS • Terraform • Docker • GitHub Actions • Linux • Python
-            </p>
-
-            <div class="terminal">
-              console.log("Initializing profile...");<br>
-              Loading: CI/CD automation, infrastructure work, and cloud-ready projects.<br>
-              <strong>Location:</strong> Nottingham, UK
-            </div>
-
-            <div class="kv">
-              <div class="chip">AWS</div>
-              <div class="chip">Terraform</div>
-              <div class="chip">Docker</div>
-              <div class="chip">GitHub Actions</div>
-              <div class="chip">Linux</div>
-              <div class="chip">Python</div>
-              <div class="chip">Azure (AZ-900)</div>
-            </div>
-
-            <div class="cta-row">
-              <a class="neon-btn" href="#portfolio">View Portfolio</a>
-              <a class="neon-btn" href="#contact">Contact</a>
-            </div>
-          </div>
-
-          <div class="hero-right">
-            <img class="hero-image" src="img/profile.jpg" alt="Nikunj Mirajkar" />
-          </div>
-        </div>
-      </section>
-
-      <!-- SUMMARY -->
-      <section id="summary" class="card">
-        <h2 class="h2">Summary</h2>
-
-        <div class="terminal">
-          Cloud & DevOps graduate with hands-on experience in AWS fundamentals, Terraform IaC, Docker,
-          GitHub Actions CI/CD, Linux, and backend/API development. I build practical projects focused
-          on automation, reliability, and scalable cloud-ready systems.
-        </div>
-
-        <div class="grid-2">
-          <div class="card soft">
-            <h3 class="h3">Highlights</h3>
-            <ul class="list">
-              <li>Built and documented multiple cloud/devops projects with CI/CD and infra automation.</li>
-              <li>Strong foundation in cloud networking (VPC, subnets, routing, security groups, ALB, Route 53).</li>
-              <li>AZ-900 certified; actively seeking entry-level Cloud/DevOps roles in the UK.</li>
-            </ul>
-          </div>
-
-          <div class="card soft">
-            <h3 class="h3">Quick Links</h3>
-            <div class="terminal">
-              GitHub: <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">github.com/NikMir15</a><br><br>
-              LinkedIn: <a class="link" href="https://www.linkedin.com/in/nikunjmirajkar/" target="_blank" rel="noopener">linkedin.com/in/nikunjmirajkar</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PORTFOLIO -->
-      <section id="portfolio" class="card">
-        <h2 class="h2">Portfolio</h2>
-        <p class="muted">Featured projects + auto-synced GitHub repos (only repos with descriptions are shown).</p>
-
-        <h3 class="h3" style="margin-top:14px">Featured Projects</h3>
-        <div class="projects-grid">
-          <div class="project card soft">
-            <h3 class="h3">Distributed File Management System</h3>
-            <p class="muted">Secure file upload, edit, encryption and multi-server storage with CRUD operations.</p>
-            <div class="terminal"><strong>Key Tech:</strong> JavaFX • MQTT • SQLite • Docker</div>
-          </div>
-
-          <div class="project card soft">
-            <h3 class="h3">Personal Finance Tracking & Budgeting App</h3>
-            <p class="muted">Cloud-ready finance manager concept with automated expense entry and analytics dashboards.</p>
-            <div class="terminal"><strong>Key Tech:</strong> Python • APIs • Data Processing</div>
-          </div>
-
-          <div class="project card soft">
-            <h3 class="h3">Cloud/DevOps Project Labs</h3>
-            <p class="muted">Infrastructure, automation, and deployment practice projects to showcase practical skills.</p>
-            <div class="terminal"><strong>Key Tech:</strong> AWS • Terraform • CI/CD • Linux</div>
-          </div>
-        </div>
-
-        <div class="terminal" style="margin-top:16px">
-          If GitHub is rate-limited/blocked:
-          <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">View all repos on GitHub</a>
-        </div>
-
-        <div id="github-status" class="muted" style="margin-top:10px">Loading GitHub repos…</div>
-        <div id="github-repos" class="projects-grid" style="margin-top:12px"></div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="card">
-        <h2 class="h2">Skills</h2>
-
-        <div class="kv" style="margin-top:6px">
-          <div class="chip">AWS</div>
-          <div class="chip">Terraform</div>
-          <div class="chip">Docker</div>
-          <div class="chip">GitHub Actions</div>
-          <div class="chip">Linux</div>
-          <div class="chip">Python</div>
-          <div class="chip">Java</div>
-          <div class="chip">MySQL</div>
-          <div class="chip">MQTT</div>
-          <div class="chip">Azure (Fundamentals)</div>
-        </div>
-      </section>
-
-      <!-- CERTIFICATIONS -->
-      <section id="certifications" class="card">
-        <h2 class="h2">Certifications</h2>
-
-        <div class="card soft">
-          <h3 class="h3">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
-          <div class="terminal">
-            Issued: 2025<br><br>
-            🔗 <a class="link" href="https://www.credly.com/earner/earned/badge/744eed9d-8a6a-4895-b4ea-1fd875c58ef8" target="_blank" rel="noopener">
-              View Credential on Credly
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="card">
-        <h2 class="h2">Contact</h2>
-
-        <div class="grid-2">
-          <div class="card soft">
-            <h3 class="h3">Email</h3>
-            <div class="terminal">
-              <a class="link" href="mailto:nikunjmir1506@gmail.com">nikunjmir1506@gmail.com</a>
-            </div>
-          </div>
-
-          <div class="card soft">
-            <h3 class="h3">LinkedIn</h3>
-            <div class="terminal">
-              <a class="link" href="https://www.linkedin.com/in/nikunjmirajkar/" target="_blank" rel="noopener">
-                linkedin.com/in/nikunjmirajkar
-              </a>
-            </div>
-          </div>
-
-          <div class="card soft">
-            <h3 class="h3">GitHub</h3>
-            <div class="terminal">
-              <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">
-                github.com/NikMir15
-              </a>
-            </div>
-          </div>
-
-          <div class="card soft">
-            <h3 class="h3">Location</h3>
-            <div class="terminal">Nottingham, UK</div>
-          </div>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <div class="muted">© <span id="year"></span> Nikunj Mirajkar</div>
-      </footer>
-
+<!-- HEADER -->
+<header class="header">
+  <div class="brand">
+    <span class="brand-badge"></span>
+    <div class="brand-text">
+      <div class="brand-name">nikunj_portfolio.exe</div>
+      <div class="brand-sub">status: online ✓</div>
     </div>
   </div>
 
-  <script src="js/main.js"></script>
-  <script src="js/github-projects.js"></script>
+  <button class="nav-toggle">&#9776;</button>
+
+  <nav class="nav" id="main-nav">
+    <a href="#home">Home</a>
+    <a href="#summary">Summary</a>
+    <a href="#experience">Experience</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="card">
+  <div class="hero">
+
+    <div class="hero-left">
+      <h1 class="h1">NIKUNJ MIRAJKAR</h1>
+
+      <p class="muted hero-sub">
+        Cloud & DevOps Graduate • AWS • Terraform • Docker • CI/CD • Linux
+      </p>
+
+      <div class="terminal">
+        Initializing profile...<br>
+        Loading automation pipelines, infrastructure deployments, and cloud projects.<br>
+        <strong>Location:</strong> Nottingham, United Kingdom
+      </div>
+
+      <div class="kv">
+        <div class="chip">AWS</div>
+        <div class="chip">Terraform</div>
+        <div class="chip">Docker</div>
+        <div class="chip">GitHub Actions</div>
+        <div class="chip">Linux</div>
+        <div class="chip">Python</div>
+        <div class="chip">Azure (AZ-900)</div>
+      </div>
+
+      <div class="cta-row">
+        <a class="neon-btn" href="#portfolio">View Portfolio</a>
+        <a class="neon-btn" href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img class="hero-image" src="img/profile.jpg" alt="Nikunj Mirajkar">
+    </div>
+
+  </div>
+</section>
+
+<!-- SUMMARY -->
+<section id="summary" class="card">
+<h2 class="h2">Professional Summary</h2>
+
+<div class="terminal">
+Cloud & DevOps graduate with hands-on experience building automated deployment pipelines,
+containerized applications, and infrastructure-as-code environments. Strong foundation in
+Linux systems, cloud networking, CI/CD automation, and troubleshooting production issues.
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="card">
+<h2 class="h2">Experience</h2>
+
+<div class="card soft">
+<h3 class="h3">DevOps Engineer (Project Experience)</h3>
+<div class="muted">Remote • Nottingham, UK • Jan 2026 – Present</div>
+
+<div class="terminal">
+Designed production-style AWS EC2 deployment pipeline<br>
+Implemented SSH key-based authentication for secure access<br>
+Containerized application using Docker and served via Nginx<br>
+Built CI/CD automation with GitHub Actions<br>
+Configured auto-deployment on every git push<br>
+Monitored containers and resolved deployment failures
+</div>
+</div>
+
+<br>
+
+<div class="card soft">
+<h3 class="h3">Cloud & DevOps Projects (Academic & Practical)</h3>
+<div class="muted">Nottingham Trent University • Oct 2024 – Oct 2025</div>
+
+<div class="terminal">
+Built containerized applications using Docker & Docker Compose<br>
+Developed REST APIs and backend services<br>
+Worked with Linux environments and Git workflows<br>
+Implemented CI/CD pipelines and microservice communication
+</div>
+</div>
+
+<br>
+
+<div class="card soft">
+<h3 class="h3">Operations Support Engineer</h3>
+<div class="muted">Clean Harbors • May 2021 – May 2023</div>
+
+<div class="terminal">
+Handled high-volume production incidents (95% SLA compliance)<br>
+Performed first-line troubleshooting and root cause analysis<br>
+Escalated critical system failures to technical teams<br>
+Maintained operational documentation and monitoring dashboards<br>
+Reduced recurring issue frequency by 15%
+</div>
+</div>
+
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="card">
+<h2 class="h2">Projects & GitHub</h2>
+
+<div id="github-status" class="muted">Loading GitHub repositories...</div>
+<div id="github-repos" class="projects-grid"></div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="card">
+<h2 class="h2">Technical Skills</h2>
+
+<div class="kv">
+<div class="chip">AWS EC2</div>
+<div class="chip">VPC</div>
+<div class="chip">IAM</div>
+<div class="chip">Terraform</div>
+<div class="chip">Docker</div>
+<div class="chip">GitHub Actions</div>
+<div class="chip">Linux</div>
+<div class="chip">Python</div>
+<div class="chip">MySQL</div>
+<div class="chip">REST APIs</div>
+<div class="chip">Networking</div>
+<div class="chip">Azure Fundamentals</div>
+</div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="card">
+<h2 class="h2">Certifications</h2>
+
+<div class="card soft">
+<h3 class="h3">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+
+<div class="terminal">
+Issued 2025<br><br>
+<a class="link" href="https://www.credly.com/earner/earned/badge/744eed9d-8a6a-4895-b4ea-1fd875c58ef8" target="_blank">
+View Credential on Credly
+</a>
+</div>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="card">
+<h2 class="h2">Contact</h2>
+
+<div class="grid-2">
+
+<div class="card soft">
+<h3 class="h3">Email</h3>
+<div class="terminal">
+<a class="link" href="mailto:nikunjmir1506@gmail.com">nikunjmir1506@gmail.com</a>
+</div>
+</div>
+
+<div class="card soft">
+<h3 class="h3">LinkedIn</h3>
+<div class="terminal">
+<a class="link" href="https://linkedin.com/in/nikunjmirajkar" target="_blank">
+linkedin.com/in/nikunjmirajkar
+</a>
+</div>
+</div>
+
+<div class="card soft">
+<h3 class="h3">GitHub</h3>
+<div class="terminal">
+<a class="link" href="https://github.com/NikMir15" target="_blank">
+github.com/NikMir15
+</a>
+</div>
+</div>
+
+<div class="card soft">
+<h3 class="h3">Location</h3>
+<div class="terminal">Nottingham, UK</div>
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="muted">© <span id="year"></span> Nikunj Mirajkar</div>
+</footer>
+
+</div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/github-projects.js"></script>
 </body>
 </html>
