@@ -1,107 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Nikunj Mirajkar</title>
-  <meta name="description" content="Featured Cloud/DevOps projects and auto-synced GitHub repositories." />
-  <link rel="canonical" href="https://nikunjmirajkar.com/projects.html" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Nikunj Mirajkar</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="brand">
-        <span class="brand-dot"></span>
-        <span class="brand-name">Nikunj Mirajkar</span>
-      </div>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-      <nav class="nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="summary.html">Summary</a>
-        <a href="projects.html">Portfolio</a>
-        <a href="skills.html">Skills</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+  <nav class="navbar">
+    <div class="logo">Nikunj</div>
 
-    <section class="card">
-      <h1 class="h1">Portfolio</h1>
-      <p class="muted">Featured projects (always visible), plus GitHub auto-synced repos below.</p>
+    <ul class="nav-links" id="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="active" href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-      <!-- Featured Projects -->
-      <h2 class="h2">Featured Projects</h2>
-      <div class="projects-grid">
-        <div class="project card">
-          <h3 class="h3">Personal Finance Tracking & Budgeting App</h3>
-          <p class="muted">
-            Cloud-ready finance manager with automated expense entry using OCR/NLP ideas and analytics dashboards.
-          </p>
-          <div class="terminal"><strong>Key Tech:</strong> Python • APIs • Data Processing • Cloud-ready Design</div>
-          <div class="kv">
-            <div class="chip">Python</div>
-            <div class="chip">Backend</div>
-            <div class="chip">OCR/NLP</div>
-          </div>
-          <div class="btn-row">
-            <a class="neon-btn" href="https://github.com/NikMir15" target="_blank" rel="noopener">View Code</a>
-          </div>
-        </div>
+    <div class="menu-toggle nav-toggle">&#9776;</div>
+  </nav>
 
-        <div class="project card">
-          <h3 class="h3">Cloud-Based Event Ticket System</h3>
-          <p class="muted">
-            Account creation and authentication portal with workflows for ticket handling and issue management.
-          </p>
-          <div class="terminal"><strong>Key Tech:</strong> Java • REST • Microservices Concepts</div>
-          <div class="kv">
-            <div class="chip">Java</div>
-            <div class="chip">REST</div>
-            <div class="chip">Services</div>
-          </div>
-          <div class="btn-row">
-            <a class="neon-btn" href="https://github.com/NikMir15" target="_blank" rel="noopener">View Code</a>
-          </div>
-        </div>
+  <header class="page-hero reveal">
+    <h1>Projects</h1>
+    <p>Automatically fetched from my GitHub profile</p>
+  </header>
 
-        <div class="project card">
-          <h3 class="h3">Distributed File Management System</h3>
-          <p class="muted">
-            Secure file upload, edit, encryption and multi-server storage with CRUD operations.
-          </p>
-          <div class="terminal"><strong>Key Tech:</strong> JavaFX • MQTT • SQLite • Docker</div>
-          <div class="kv">
-            <div class="chip">JavaFX</div>
-            <div class="chip">MQTT</div>
-            <div class="chip">SQLite</div>
-            <div class="chip">Docker</div>
-          </div>
-          <div class="btn-row">
-            <a class="neon-btn" href="https://github.com/NikMir15" target="_blank" rel="noopener">View Code</a>
-          </div>
-        </div>
-      </div>
+  <main class="container reveal">
+    <div class="projects-grid" id="github-projects"></div>
+  </main>
 
-      <!-- Auto-synced GitHub -->
-      <h2 class="h2" style="margin-top:22px">More Projects (Auto-synced from GitHub)</h2>
-      <div class="terminal">
-        If GitHub is blocked/rate-limited, use:
-        <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">View all repos on GitHub</a>
-      </div>
-
-      <div id="github-status" class="muted" style="margin-top:10px">Loading GitHub repos…</div>
-      <div id="github-repos" class="projects-grid" style="margin-top:12px"></div>
-    </section>
-
-    <footer class="footer">
-      <div class="muted">Portfolio</div>
-    </footer>
-  </div>
+  <footer>
+    &copy; 2026 Nikunj Mirajkar. All rights reserved.
+  </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/github-projects.js"></script>
 </body>
 </html>

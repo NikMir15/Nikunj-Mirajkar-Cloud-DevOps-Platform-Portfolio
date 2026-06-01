@@ -1,110 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Skills — Nikunj Mirajkar</title>
-  <meta name="description" content="Technical skills aligned with Nikunj Mirajkar's CV (Cloud/DevOps)." />
-  <link rel="canonical" href="https://nikunjmirajkar.com/skills.html" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Nikunj Mirajkar</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="brand">
-        <span class="brand-dot"></span>
-        <span class="brand-name">Nikunj Mirajkar</span>
+
+  <nav class="navbar">
+    <div class="logo">Nikunj</div>
+
+    <ul class="nav-links" id="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a class="active" href="skills.html">Skills</a></li>
+      <li><a href="gaming.html">Gaming</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle nav-toggle">&#9776;</div>
+  </nav>
+
+  <header class="page-hero reveal">
+    <h1>Skills</h1>
+    <p>Cloud • DevOps • Platform Engineering • Backend • Networking</p>
+  </header>
+
+  <main class="skills-wrap reveal">
+    <section class="skills-grid">
+
+      <div class="skill-card">
+        <h3>Cloud & Infrastructure</h3>
+        <ul>
+          <li>AWS: EC2, VPC, Security Groups, ALB, Route 53</li>
+          <li>Networking: subnets, routing, IGW, CIDR, /32 SSH restriction</li>
+          <li>Azure Fundamentals (AZ-900)</li>
+        </ul>
       </div>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-      <nav class="nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="summary.html">Summary</a>
-        <a href="projects.html">Portfolio</a>
-        <a href="skills.html">Skills</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <section class="card">
-      <h1 class="h1">Technical Skills</h1>
-
-      <div class="kv" style="margin-top:6px">
-        <div class="chip">AWS</div>
-        <div class="chip">Terraform</div>
-        <div class="chip">Docker</div>
-        <div class="chip">GitHub Actions</div>
-        <div class="chip">Linux</div>
-        <div class="chip">Python</div>
-        <div class="chip">Java</div>
-        <div class="chip">MySQL</div>
-        <div class="chip">MQTT</div>
-        <div class="chip">Azure (Fundamentals)</div>
+      <div class="skill-card">
+        <h3>DevOps & CI/CD</h3>
+        <ul>
+          <li>Docker & Docker Compose (multi-service)</li>
+          <li>GitHub Actions CI/CD pipelines</li>
+          <li>Automation mindset: repeatable builds</li>
+        </ul>
       </div>
 
-      <div class="grid-2">
-        <div class="card soft">
-          <h3 class="h3">Cloud & Infrastructure</h3>
-          <div class="terminal">
-            AWS (EC2, ALB, IAM, Route 53, VPC, Security Groups)<br>
-            Internet Gateway & Route Tables<br>
-            Microsoft Azure (Fundamentals)
-          </div>
-        </div>
+      <div class="skill-card">
+        <h3>Infrastructure as Code</h3>
+        <ul>
+          <li>Terraform: init / plan / apply / destroy</li>
+          <li>Outputs, variables, reusable structure</li>
+          <li>Provisioning: VPC + EC2 + user-data automation</li>
+        </ul>
+      </div>
 
-        <div class="card soft">
-          <h3 class="h3">DevOps & CI/CD</h3>
-          <div class="terminal">
-            Docker & Docker Compose<br>
-            GitHub Actions (CI/CD Pipelines)<br>
-            Terraform CLI (init, plan, apply, destroy)
-          </div>
-        </div>
+      <div class="skill-card">
+        <h3>Backend & APIs</h3>
+        <ul>
+          <li>REST APIs, microservices communication</li>
+          <li>Python, Java</li>
+          <li>Routing & API gateway concepts</li>
+        </ul>
+      </div>
 
-        <div class="card soft">
-          <h3 class="h3">Programming</h3>
-          <div class="terminal">
-            Python<br>
-            Java<br>
-            Shell Scripting (Linux)
-          </div>
-        </div>
+      <div class="skill-card">
+        <h3>Databases & Messaging</h3>
+        <ul>
+          <li>SQLite, MySQL</li>
+          <li>MQTT event-driven messaging</li>
+        </ul>
+      </div>
 
-        <div class="card soft">
-          <h3 class="h3">Backend & APIs</h3>
-          <div class="terminal">
-            REST API Development<br>
-            MVC Architecture<br>
-            Backend Service Design
-          </div>
-        </div>
+      <div class="skill-card">
+        <h3>Security & Reliability</h3>
+        <ul>
+          <li>HTTPS routing, CORS troubleshooting</li>
+          <li>Least-exposure access (restricted SSH)</li>
+          <li>Logs/metrics mindset</li>
+        </ul>
+      </div>
 
-        <div class="card soft">
-          <h3 class="h3">Databases & Messaging</h3>
-          <div class="terminal">
-            MySQL • SQLite<br>
-            MQTT (Event-driven communication)
-          </div>
-        </div>
+    </section>
 
-        <div class="card soft">
-          <h3 class="h3">Security & Networking</h3>
-          <div class="terminal">
-            HTTPS & CORS<br>
-            Load Balancing<br>
-            IP-restricted SSH access / CIDR (/32)<br>
-            Public & Private Subnets (Cloud networking fundamentals)
-          </div>
+    <section class="skills-callout">
+      <h2>What I bring to a team</h2>
+      <div class="callout-grid">
+        <div class="callout-item">
+          <h4>Automation-first</h4>
+          <p>I prefer repeatable pipelines and IaC over manual steps.</p>
+        </div>
+        <div class="callout-item">
+          <h4>Production troubleshooting</h4>
+          <p>Comfortable debugging routing, CORS, containers, and deployment issues.</p>
+        </div>
+        <div class="callout-item">
+          <h4>Clear documentation</h4>
+          <p>I write clean READMEs and structured steps for smooth handovers.</p>
         </div>
       </div>
     </section>
+  </main>
 
-    <footer class="footer">
-      <div class="muted">Skills</div>
-    </footer>
-  </div>
+  <footer>
+    &copy; 2026 Nikunj Mirajkar. All rights reserved.
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
