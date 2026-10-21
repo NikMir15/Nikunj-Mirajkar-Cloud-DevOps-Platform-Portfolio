@@ -1,121 +1,117 @@
-
 (() => {
-  'use strict';
+  // Year
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Update footer year
-  const year = document.getElementById('year');
-
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
-
-  // Mobile navigation
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.getElementById('main-nav');
-
+  // Mobile nav toggle
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.getElementById("main-nav");
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const opened = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(opened));
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
+    // Close nav after click (mobile)
+    nav.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
       });
     });
   }
 
-  // Matrix rain animation
-  const canvas = document.getElementById('matrix');
-
-  if (
-    !canvas ||
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  ) {
-    return;
-  }
-
-  const ctx = canvas.getContext('2d', { alpha: false });
-
-  if (!ctx) return;
-
-  const chars = '01アイウエオカキクケコサシスセソタチツテト';
-
-  let columns = [];
-  let fontSize = 15;
-  let width = 0;
-  let height = 0;
-  let last = 0;
-
-  function resize() {
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-
-    width = window.innerWidth;
-    height = window.innerHeight;
-
-    canvas.width = Math.floor(width * dpr);
-    canvas.height = Math.floor(height * dpr);
-
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-    // More Matrix columns on mobile
-    fontSize = width < 650 ? 12 : 16;
-
-    columns = Array.from(
-      { length: Math.ceil(width / fontSize) },
-      () => Math.random() * -(height / fontSize)
-    );
-
-    ctx.fillStyle = '#020b07';
-    ctx.fillRect(0, 0, width, height);
-  }
-
-  function draw(now) {
-    requestAnimationFrame(draw);
-
-    // Pause when tab is hidden and limit frame rate
-    if (document.hidden || now - last < 65) return;
-
-    last = now;
-
-    // Transparent overlay creates fading character trails
-    ctx.fillStyle = 'rgba(2, 11, 7, 0.09)';
-    ctx.fillRect(0, 0, width, height);
-
-    ctx.font = `${fontSize}px monospace`;
-
-    for (let i = 0; i < columns.length; i++) {
-      const char = chars[
-        Math.floor(Math.random() * chars.length)
-      ];
-
-      ctx.fillStyle = Math.random() > .985
-        ? '#72ffc0'
-        : '#007c4c';
-
-      ctx.fillText(
-        char,
-        i * fontSize,
-        columns[i] * fontSize
-      );
-
-      if (
-        columns[i] * fontSize > height &&
-        Math.random() > .975
-      ) {
-        columns[i] = 0;
-      } else {
-        columns[i] += .48;
-      }
-    }
-  }
-
-  window.addEventListener('resize', resize, {
-    passive: true
+  // Smooth scroll (native + small fallback)
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("href");
+      if (!id || id === "#") return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", id);
+    });
   });
 
-  resize();
+  // MATRIX RAIN
+  const canvas = document.getElementById("matrix");
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d", { alpha: false });
+  if (!ctx) return;
+
+  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  let w = 0, h = 0, dpr = 1;
+  let cols = 0;
+  let drops = [];
+  let fontSize = 16;
+  let speedBase = 1;
+  const chars = "アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  function computeSettings() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = Math.floor(window.innerWidth);
+    h = Math.floor(window.innerHeight);
+
+    // more rain on mobile + big screens
+    const isMobile = w < 720;
+    fontSize = isMobile ? 14 : 16;
+
+    // density tweak: smaller columnWidth => more columns
+    const colWidth = isMobile ? 12 : 14;
+
+    canvas.width = Math.floor(w * dpr);
+    canvas.height = Math.floor(h * dpr);
+    canvas.style.width = w + "px";
+    canvas.style.height = h + "px";
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.font = `${fontSize}px ui-monospace, Menlo, Consolas, monospace`;
+
+    cols = Math.floor(w / colWidth);
+    drops = new Array(cols).fill(0).map(() => Math.random() * h);
+
+    // speed
+    speedBase = prefersReduced ? 0.6 : (isMobile ? 1.15 : 1.0);
+  }
+
+  function randChar() {
+    return chars[Math.floor(Math.random() * chars.length)];
+  }
+
+  // Subtle tuning: slower fade => softer look, but not heavy
+  function draw() {
+    // fade
+    ctx.fillStyle = "rgba(0, 0, 0, 0.07)";
+    ctx.fillRect(0, 0, w, h);
+
+    for (let i = 0; i < cols; i++) {
+      const x = i * (w / cols);
+      const y = drops[i];
+
+      // green glow
+      ctx.fillStyle = "rgba(0, 255, 120, 0.85)";
+      ctx.fillText(randChar(), x, y);
+
+      // drop update
+      drops[i] = y + fontSize * speedBase;
+
+      // reset
+      if (drops[i] > h + 20 && Math.random() > 0.975) {
+        drops[i] = -Math.random() * 120;
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  computeSettings();
+  window.addEventListener("resize", () => {
+    computeSettings();
+  }, { passive: true });
+
+  // Start
   requestAnimationFrame(draw);
 })();

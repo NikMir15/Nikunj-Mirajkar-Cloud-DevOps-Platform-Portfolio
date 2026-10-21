@@ -1,358 +1,333 @@
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#03140e">
-  <meta name="description" content="Nikunj Mirajkar — Cloud Engineering, DevOps and Data Analytics portfolio. AWS, Python, SQL, Terraform, Docker and automation.">
-  <title>Nikunj Mirajkar | Cloud Engineering & Data Analytics</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nikunj Mirajkar — Cloud & DevOps (Matrix)</title>
+  <meta name="description" content="Single-page Matrix-themed Cloud & DevOps portfolio of Nikunj Mirajkar (AZ-900). AWS, Terraform, Docker, GitHub Actions, Linux, Python." />
+  <meta name="theme-color" content="#050a07" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
+  <!-- Matrix background -->
   <canvas id="matrix" aria-hidden="true"></canvas>
   <div class="matrix-overlay" aria-hidden="true"></div>
 
-  <header class="site-header container">
-    <a class="brand" href="#home">
-      <span class="status-dot"></span>
-      <span>nikunj_portfolio.exe
-        <small>status: online</small>
-      </span>
-    </a>
+  <div class="page">
+    <div class="container">
 
-    <button class="menu-toggle" aria-label="Toggle menu"
-      aria-controls="main-nav" aria-expanded="false">☰</button>
+      <!-- Header -->
+      <header class="header">
+        <div class="brand">
+          <span class="brand-badge"></span>
+          <div class="brand-text">
+            <div class="brand-name">nikunj_portfolio.exe</div>
+            <div class="brand-sub">status: online ✓</div>
+          </div>
+        </div>
 
-    <nav id="main-nav" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#summary">Summary</a>
-      <a href="#experience">Experience</a>
-      <a href="#portfolio">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
 
-  <main class="container">
+        <!-- Single-page nav (anchors) -->
+        <nav class="nav" id="main-nav">
+          <a href="#home">Home</a>
+          <a href="#summary">Summary</a>
+          <a href="#experience">Experience</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#skills">Skills</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-    <!-- HOME -->
-    <section class="panel hero" id="home">
-      <div>
-        <p class="eyebrow">&gt; hello_world</p>
-        <h1>NIKUNJ <span>MIRAJKAR</span></h1>
+      <!-- HOME -->
+      <section id="home" class="card">
+        <div class="hero">
+          <div class="hero-left">
+            <h1 class="h1">NIKUNJ MIRAJKAR</h1>
+            <p class="muted hero-sub">
+              Cloud & DevOps Graduate (AZ-900) • AWS • Terraform • Docker • GitHub Actions • Linux • Python
+            </p>
 
-        <p class="hero-role">
-          Cloud Engineering <span>•</span>
-          DevOps <span>•</span>
-          Data Analytics
-        </p>
+            <div class="terminal">
+              console.log("Initializing profile...");<br>
+              Loading: CI/CD automation, infrastructure work, and cloud-ready projects.<br>
+              <strong>Location:</strong> Nottingham, UK
+            </div>
 
-        <p class="intro">
-          MSc Cloud &amp; Enterprise Computing graduate building
-          cloud infrastructure, automated deployments, APIs
-          and data-driven applications.
-        </p>
+            <div class="kv">
+              <div class="chip">AWS</div>
+              <div class="chip">Terraform</div>
+              <div class="chip">Docker</div>
+              <div class="chip">GitHub Actions</div>
+              <div class="chip">Linux</div>
+              <div class="chip">Python</div>
+              <div class="chip">Azure (AZ-900)</div>
+            </div>
+
+            <div class="cta-row">
+              <a class="neon-btn" href="#portfolio">View Portfolio</a>
+              <a class="neon-btn" href="#contact">Contact</a>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <img class="hero-image" src="img/profile.jpg" alt="Nikunj Mirajkar" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section id="summary" class="card">
+        <h2 class="h2">Summary</h2>
 
         <div class="terminal">
-          <span class="prompt">$</span> profile --location "Nottingham, UK"<br>
-          <span class="prompt">$</span> skills --focus "AWS, Python, SQL, Docker, Terraform"<br>
-          <span class="prompt">$</span> status <strong>ready_to_build</strong>
+          Cloud & DevOps graduate with hands-on experience in AWS fundamentals, Terraform IaC, Docker,
+          GitHub Actions CI/CD, Linux, and backend/API development. I build practical projects focused
+          on automation, reliability, and scalable cloud-ready systems.
         </div>
 
-        <div class="chips">
-          <span>AWS</span>
-          <span>Python</span>
-          <span>SQL</span>
-          <span>Terraform</span>
-          <span>Docker</span>
-          <span>GitHub Actions</span>
-          <span>Azure AZ-900</span>
+        <div class="grid-2">
+          <div class="card soft">
+            <h3 class="h3">Highlights</h3>
+            <ul class="list">
+              <li>Built and documented multiple cloud/devops projects with CI/CD and infra automation.</li>
+              <li>Strong foundation in cloud networking (VPC, subnets, routing, security groups, ALB, Route 53).</li>
+              <li>AZ-900 certified; actively seeking entry-level Cloud/DevOps roles in the UK.</li>
+            </ul>
+          </div>
+
+          <div class="card soft">
+            <h3 class="h3">Quick Links</h3>
+            <div class="terminal">
+              GitHub: <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">github.com/NikMir15</a><br><br>
+              LinkedIn: <a class="link" href="https://www.linkedin.com/in/nikunjmirajkar/" target="_blank" rel="noopener">linkedin.com/in/nikunjmirajkar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE (MOVED UP) -->
+      <section id="experience" class="card">
+        <h2 class="h2">Experience</h2>
+
+        <div class="exp-grid">
+          <div class="card soft exp-card">
+            <h3 class="h3">DevOps Engineer — Personal Cloud Infrastructure Lab</h3>
+            <div class="muted">Jan 2026 – Present • Remote</div>
+
+            <div class="terminal exp-body">
+              <ul class="list exp-list">
+                <li>Designed and deployed a cloud-hosted application environment on AWS EC2 (Ubuntu)</li>
+                <li>Implemented secure server access using SSH key authentication and Linux user management</li>
+                <li>Containerised applications using Docker and configured Nginx as a reverse proxy</li>
+                <li>Built automated CI/CD pipeline using GitHub Actions for build and deployment</li>
+                <li>Configured servers to automatically pull new code and rebuild containers on updates</li>
+                <li>Diagnosed and resolved deployment failures, networking issues and container runtime errors</li>
+                <li>Monitored running services and ensured application availability after deployments</li>
+                <li>Reduced manual deployment steps through automation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card soft exp-card">
+            <h3 class="h3">Cloud & DevOps Engineer — Hands-on Lab Environment</h3>
+            <div class="muted">Oct 2024 – Oct 2025 • Nottingham Trent University</div>
+
+            <div class="terminal exp-body">
+              <ul class="list exp-list">
+                <li>Built containerised applications using Docker and Docker Compose</li>
+                <li>Developed RESTful backend services and implemented authentication mechanisms</li>
+                <li>Created microservices architecture to improve service separation and scalability</li>
+                <li>Implemented CI/CD pipelines to automate build and integration workflows</li>
+                <li>Worked with Linux environments, Git version control and networking fundamentals</li>
+                <li>Practiced debugging, configuration management and deployment troubleshooting</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div class="actions">
-          <a class="button" href="#portfolio">Explore Projects →</a>
-          <a class="button secondary" href="#contact">Contact Me</a>
+        <div class="card soft exp-card exp-full">
+          <h3 class="h3">Operations Support Engineer — Clean Harbors</h3>
+          <div class="muted">May 2021 – May 2023 • Full-time</div>
+
+          <div class="terminal exp-body">
+            <ul class="list exp-list">
+              <li>Worked in a high-volume, ticket-driven operational environment using Salesforce CRM (comparable to ITSM platforms)</li>
+              <li>Performed first-line incident response and triage based on severity and business impact</li>
+              <li>Managed 40+ weekly incident tickets ensuring 95%+ SLA compliance</li>
+              <li>Escalated complex production issues to technical teams and followed through to resolution</li>
+              <li>Investigated recurring issues and contributed to root cause analysis and process improvements</li>
+              <li>Coordinated cross-functional teams to restore service continuity for enterprise clients</li>
+              <li>Maintained operational documentation and workflow processes</li>
+              <li>Analysed operational dashboards to reduce recurring issue frequency by 15%</li>
+              <li>Worked in an SLA-driven support environment similar to IT Service Management (incident, escalation and resolution lifecycle)</li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="portrait-wrap">
-        <img class="portrait"
-          src="img/profile.jpg"
-          alt="Portrait of Nikunj Mirajkar"
-          width="440"
-          height="480"
-          decoding="async"
-          onerror="this.style.display='none';this.parentElement.classList.add('no-photo')">
-        <span class="portrait-fallback">NM</span>
-      </div>
-    </section>
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="card">
+        <h2 class="h2">Portfolio</h2>
+        <p class="muted">Featured projects + auto-synced GitHub repos (only repos with descriptions are shown).</p>
 
-    <!-- SUMMARY -->
-    <section class="panel" id="summary">
-      <div class="section-heading">
-        <p class="eyebrow">01 / profile</p>
-        <h2>Professional Summary</h2>
-      </div>
+        <h3 class="h3" style="margin-top:14px">Featured Projects</h3>
+        <div class="projects-grid">
+          <div class="project card soft">
+            <h3 class="h3">Distributed File Management System</h3>
+            <p class="muted">Secure file upload, edit, encryption and multi-server storage with CRUD operations.</p>
+            <div class="terminal"><strong>Key Tech:</strong> JavaFX • MQTT • SQLite • Docker</div>
+          </div>
 
-      <p class="lead">
-        Cloud and data-focused professional with an MSc in Cloud
-        &amp; Enterprise Computing, Microsoft Azure Fundamentals
-        certification, practical AWS/DevOps projects and hands-on
-        Python, SQL and data analysis experience.
-      </p>
+          <div class="project card soft">
+            <h3 class="h3">Personal Finance Tracking & Budgeting App</h3>
+            <p class="muted">Cloud-ready finance manager concept with automated expense entry and analytics dashboards.</p>
+            <div class="terminal"><strong>Key Tech:</strong> Python • APIs • Data Processing</div>
+          </div>
 
-      <div class="two-col">
-        <article class="subpanel">
-          <h3>Core Strengths</h3>
-          <ul>
-            <li>Cloud infrastructure and deployment automation</li>
-            <li>Python, SQL and data analysis</li>
-            <li>AWS, Azure and cloud computing</li>
-            <li>CI/CD pipelines and containerization</li>
-            <li>Data visualization, reporting and dashboards</li>
-          </ul>
-        </article>
+          <div class="project card soft">
+            <h3 class="h3">Cloud/DevOps Project Labs</h3>
+            <p class="muted">Infrastructure, automation, and deployment practice projects to showcase practical skills.</p>
+            <div class="terminal"><strong>Key Tech:</strong> AWS • Terraform • CI/CD • Linux</div>
+          </div>
+        </div>
 
-        <article class="subpanel">
-          <h3>Professional Highlights</h3>
-          <ul>
-            <li>MSc Cloud &amp; Enterprise Computing — Commendation</li>
-            <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
-            <li>Hands-on AWS cloud infrastructure and DevOps portfolio</li>
-            <li>Python, SQL and Power BI analytics skills</li>
-            <li>Cloud deployment automation and analytical projects</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+        <div class="terminal" style="margin-top:16px">
+          If GitHub is rate-limited/blocked: <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">View all repos on GitHub</a>
+        </div>
 
-    <!-- EXPERIENCE -->
-    <section class="panel" id="experience">
-      <div class="section-heading">
-        <p class="eyebrow">02 / background</p>
-        <h2>Professional Experience</h2>
-        <p class="muted">
-          Cloud Engineering • Data Analytics • Technical Training
-        </p>
-      </div>
+        <div id="github-status" class="muted" style="margin-top:10px">Loading GitHub repos…</div>
+        <div id="github-repos" class="projects-grid" style="margin-top:12px"></div>
+      </section>
 
-      <div class="two-col experience-grid">
+      <!-- SKILLS -->
+      <section id="skills" class="card">
+        <h2 class="h2">Skills</h2>
 
-        <article class="subpanel">
-          <h3>Cloud Engineer | Personal Cloud Infrastructure Lab</h3>
-          <p class="company">Personal Project • Self-employed</p>
-          <p class="dates">Jan 2026 – Present • Nottingham, UK • Remote</p>
-          <ul>
-            <li>Analyzed warehouse datasets using SQL and Python to compare performance across training status, work zones and experience levels.</li>
-            <li>Created Python charts and analytical summaries to communicate trends and findings.</li>
-            <li>Built PostgreSQL and PostGIS databases for structured and geospatial data.</li>
-            <li>Developed FastAPI endpoints for location-based insights and analytics.</li>
-            <li>Deployed applications on AWS EC2 with Ubuntu and configured networking and access.</li>
-            <li>Containerized applications using Docker and Docker Compose.</li>
-            <li>Built GitHub Actions CI/CD workflows and investigated deployment issues.</li>
-          </ul>
-        </article>
+        <div class="kv" style="margin-top:6px">
+          <div class="chip">AWS</div>
+          <div class="chip">Terraform</div>
+          <div class="chip">Docker</div>
+          <div class="chip">GitHub Actions</div>
+          <div class="chip">Linux</div>
+          <div class="chip">Python</div>
+          <div class="chip">Java</div>
+          <div class="chip">MySQL</div>
+          <div class="chip">SQLite</div>
+          <div class="chip">MQTT</div>
+          <div class="chip">Azure (AZ-900)</div>
+        </div>
 
-        <article class="subpanel">
-          <h3>Training Instructor</h3>
-          <p class="company">Frasers Group • Full-time</p>
-          <p class="dates">Oct 2025 – Present • United Kingdom • On-site</p>
-          <ul>
-            <li>Deliver structured onboarding and practical training, adapting coaching to individual learning needs.</li>
-            <li>Monitor trainee progress and identify colleagues requiring additional support.</li>
-            <li>Maintain training records and document assessments consistently.</li>
-            <li>Review training results to identify knowledge gaps and refresher needs.</li>
-            <li>Summarize progress and development needs for team leaders.</li>
-            <li>Use feedback and observations to improve training materials and delivery.</li>
-            <li>Work with supervisors to review training effectiveness and recommend improvements.</li>
-          </ul>
-        </article>
+        <div class="grid-2">
+          <div class="card soft">
+            <h3 class="h3">Cloud & Infrastructure</h3>
+            <div class="terminal">
+              AWS (EC2, ALB, IAM, Route 53, VPC, Security Groups)<br>
+              Internet Gateway & Route Tables<br>
+              Microsoft Azure (Fundamentals)
+            </div>
+          </div>
 
-        <article class="subpanel">
-          <h3>Cloud &amp; DevOps Engineer | Hands-on Lab Environment</h3>
-          <p class="company">Nottingham Trent University • Academic Project</p>
-          <p class="dates">Oct 2024 – Oct 2025 • Nottingham, UK • On-site</p>
-          <ul>
-            <li>Combined data analysis and cloud computing in academic projects.</li>
-            <li>Used SQL to extract, join and aggregate data for reporting.</li>
-            <li>Cleaned and transformed datasets to address missing values and inconsistent formats.</li>
-            <li>Analyzed data using Python and produced charts and summaries.</li>
-            <li>Worked with Docker, REST APIs, Linux, Git and deployment troubleshooting.</li>
-          </ul>
-        </article>
+          <div class="card soft">
+            <h3 class="h3">DevOps & CI/CD</h3>
+            <div class="terminal">
+              Docker & Docker Compose<br>
+              GitHub Actions (CI/CD Pipelines)<br>
+              Terraform CLI (init, plan, apply, destroy)
+            </div>
+          </div>
 
-        <article class="subpanel">
-          <h3>Operations Support Engineer</h3>
-          <p class="company">Clean Harbors • Full-time</p>
-          <p class="dates">May 2021 – May 2023 • Pune, India • On-site</p>
-          <ul>
-            <li>Supported 40+ incidents and service requests weekly while maintaining 95%+ SLA performance.</li>
-            <li>Performed incident triage, escalations and issue tracking in a ticket-driven environment.</li>
-            <li>Contributed to root cause analysis and operational reporting, helping reduce recurring issues by approximately 15%.</li>
-            <li>Coordinated with technical teams and maintained documentation.</li>
-            <li>Onboarded new colleagues and supported them with process and technical questions.</li>
-          </ul>
-        </article>
+          <div class="card soft">
+            <h3 class="h3">Programming</h3>
+            <div class="terminal">Python • Java • Shell scripting (Linux)</div>
+          </div>
 
-      </div>
-    </section>
+          <div class="card soft">
+            <h3 class="h3">Backend & Data</h3>
+            <div class="terminal">
+              REST API Development • MVC Architecture<br>
+              MySQL • SQLite • MQTT messaging
+            </div>
+          </div>
 
-    <!-- PROJECTS -->
-    <section class="panel" id="portfolio">
-      <div class="section-heading">
-        <p class="eyebrow">03 / work</p>
-        <h2>Featured Projects</h2>
-        <p class="muted">
-          Selected practical projects. Explore source code and documentation on GitHub.
-        </p>
-      </div>
+          <div class="card soft">
+            <h3 class="h3">Security & Networking</h3>
+            <div class="terminal">
+              HTTPS & CORS • Load Balancing<br>
+              IP-restricted SSH / CIDR (/32)<br>
+              Public & Private Subnets (cloud networking fundamentals)
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="projects-grid">
+      <!-- CERTIFICATIONS -->
+      <section id="certifications" class="card">
+        <h2 class="h2">Certifications</h2>
 
-        <article class="subpanel project">
-          <h3>Cloud-Based Geospatial Infrastructure Monitoring</h3>
-          <p>FastAPI, PostgreSQL/PostGIS and Leaflet application for infrastructure locations, distance calculations and analytics.</p>
-          <p class="tech">Python · FastAPI · PostGIS · Docker · Leaflet</p>
-          <a href="https://github.com/NikMir15/Cloud-Based-Geospatial-Infrastructure-Monitoring-System" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-        </article>
+        <div class="card soft">
+          <h3 class="h3">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+          <div class="terminal">
+            Issued: 2025<br><br>
+            🔗 <a class="link" href="https://www.credly.com/earner/earned/badge/744eed9d-8a6a-4895-b4ea-1fd875c58ef8" target="_blank" rel="noopener">
+              View Credential on Credly
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <article class="subpanel project">
-          <h3>Warehouse Operations Analytics</h3>
-          <p>SQL and Python analysis of warehouse performance, training status, experience bands and operational trends.</p>
-          <p class="tech">SQL · Python · EDA · Reporting</p>
-          <a href="https://github.com/NikMir15/Warehouse-Operations-Analytics" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-        </article>
+      <!-- CONTACT -->
+      <section id="contact" class="card">
+        <h2 class="h2">Contact</h2>
 
-        <article class="subpanel project">
-          <h3>DevOps Docker AWS Deployment</h3>
-          <p>Containerized application deployment and cloud infrastructure automation using AWS and CI/CD workflows.</p>
-          <p class="tech">AWS EC2 · Docker · GitHub Actions · Linux</p>
-          <a href="https://github.com/NikMir15/DevOps-Docker-AWS-Deployment" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-        </article>
+        <div class="grid-2">
+          <div class="card soft">
+            <h3 class="h3">Email</h3>
+            <div class="terminal">
+              <a class="link" href="mailto:nikunjmir1506@gmail.com">nikunjmir1506@gmail.com</a>
+            </div>
+          </div>
 
-        <article class="subpanel project">
-          <h3>Terraform AWS Infrastructure Lab</h3>
-          <p>Infrastructure as code for AWS VPC, EC2, Nginx and restricted SSH access.</p>
-          <p class="tech">Terraform · AWS · Networking · Nginx</p>
-          <a href="https://github.com/NikMir15/Terraform-AWS-VPC-EC2-Nginx-lab-with-IP-restricted-SSH" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-        </article>
+          <div class="card soft">
+            <h3 class="h3">LinkedIn</h3>
+            <div class="terminal">
+              <a class="link" href="https://www.linkedin.com/in/nikunjmirajkar/" target="_blank" rel="noopener">
+                linkedin.com/in/nikunjmirajkar
+              </a>
+            </div>
+          </div>
 
-        <article class="subpanel project">
-          <h3>Python Radio Astronomy Data Analysis</h3>
-          <p>Python-based portfolio project exploring scientific data analysis workflows.</p>
-          <p class="tech">Python · Scientific Data · Visualization</p>
-          <a href="https://github.com/NikMir15/Python-Radio-Astronomy-Data-Analysis" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-        </article>
+          <div class="card soft">
+            <h3 class="h3">GitHub</h3>
+            <div class="terminal">
+              <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">
+                github.com/NikMir15
+              </a>
+            </div>
+          </div>
 
-        <article class="subpanel project">
-          <h3>Cloud-Native Microservices Platform</h3>
-          <p>Container-based application architecture and AWS cloud deployment practice.</p>
-          <p class="tech">AWS ECS · Docker · Microservices</p>
-          <a href="https://github.com/NikMir15/Cloud-Native-Microservices-Platform" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-        </article>
+          <div class="card soft">
+            <h3 class="h3">Location</h3>
+            <div class="terminal">Nottingham, UK</div>
+          </div>
+        </div>
 
-      </div>
+        <div class="cta-row">
+          <a class="neon-btn" href="#portfolio">Back to Portfolio</a>
+          <a class="neon-btn" href="#home">Back to Top</a>
+        </div>
+      </section>
 
-      <p class="more-projects">
-        <a class="button secondary" href="https://github.com/NikMir15?tab=repositories" target="_blank" rel="noopener noreferrer">
-          All GitHub Repositories ↗
-        </a>
-      </p>
-    </section>
+      <footer class="footer">
+        <div class="muted">© <span id="year"></span> Nikunj Mirajkar</div>
+      </footer>
 
-    <!-- SKILLS -->
-    <section class="panel" id="skills">
-      <div class="section-heading">
-        <p class="eyebrow">04 / toolkit</p>
-        <h2>Technical Skills</h2>
-      </div>
+    </div>
+  </div>
 
-      <div class="skills-grid">
-        <article class="subpanel">
-          <h3>Cloud &amp; Infrastructure</h3>
-          <p>AWS EC2, VPC, IAM, ALB, Route 53, CloudWatch; Azure Fundamentals</p>
-        </article>
-
-        <article class="subpanel">
-          <h3>DevOps &amp; Automation</h3>
-          <p>Docker, Docker Compose, Terraform, GitHub Actions, Git, Linux, Bash, Nginx</p>
-        </article>
-
-        <article class="subpanel">
-          <h3>Data &amp; Analytics</h3>
-          <p>Python, SQL, Pandas, data cleaning, EDA, visualization, Power BI</p>
-        </article>
-
-        <article class="subpanel">
-          <h3>Backend &amp; Databases</h3>
-          <p>FastAPI, REST APIs, PostgreSQL, PostGIS, MySQL, SQLite</p>
-        </article>
-
-        <article class="subpanel">
-          <h3>Networking &amp; Reliability</h3>
-          <p>TCP/IP, DNS, subnets, security groups, HTTPS/TLS, logging and troubleshooting</p>
-        </article>
-
-        <article class="subpanel">
-          <h3>Collaboration</h3>
-          <p>Technical documentation, cross-team coordination, coaching and reporting</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section class="panel" id="certifications">
-      <div class="section-heading">
-        <p class="eyebrow">05 / credentials</p>
-        <h2>Education &amp; Certifications</h2>
-      </div>
-
-      <div class="two-col">
-        <article class="subpanel">
-          <h3>MSc Cloud &amp; Enterprise Computing</h3>
-          <p>Nottingham Trent University</p>
-          <p class="dates">Award: Commendation</p>
-        </article>
-
-        <article class="subpanel">
-          <h3>Microsoft Certified: Azure Fundamentals</h3>
-          <p>AZ-900</p>
-          <a href="https://www.credly.com/earner/earned/badge/744eed9d-8a6a-4895-b4ea-1fd875c58ef8" target="_blank" rel="noopener noreferrer">
-            View credential ↗
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="panel" id="contact">
-      <div class="section-heading">
-        <p class="eyebrow">06 / connect</p>
-        <h2>Get in Touch</h2>
-      </div>
-
-      <p class="lead">
-        Interested in cloud engineering, DevOps or data analytics?
-        I'd be glad to connect.
-      </p>
-
-      <div class="contact-links">
-        <a href="mailto:nikunjmir1506@gmail.com">Email ↗</a>
-        <a href="https://www.linkedin.com/in/nikunjmirajkar/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        <a href="https://github.com/NikMir15" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-      </div>
-
-      <p class="muted">Nottingham, United Kingdom</p>
-    </section>
-
-  </main>
-
-  <footer class="container footer">
-    © <span id="year"></span> Nikunj Mirajkar
-  </footer>
+  <script src="js/main.js" defer></script>
+  <script src="js/github-projects.js" defer></script>
 </body>
 </html>
