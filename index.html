@@ -1,228 +1,650 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nikunj Mirajkar — Cloud & DevOps Engineer</title>
-  <meta name="description" content="Single-page matrix-themed Cloud & DevOps portfolio of Nikunj Mirajkar. AWS, Terraform, Docker, GitHub Actions, Linux, Python." />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Nikunj Mirajkar | Cloud Engineer & Data Analytics</title>
+
+  <meta name="description"
+    content="Portfolio of Nikunj Mirajkar, a Cloud & DevOps engineer and data analytics practitioner. AWS, Azure, Python, SQL, Terraform, Docker and CI/CD.">
+
+  <meta name="theme-color" content="#030b08">
+
+  <link rel="canonical" href="https://nikunjmirajkar.com/">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+
+  <!-- MATRIX BACKGROUND -->
   <canvas id="matrix" aria-hidden="true"></canvas>
   <div class="matrix-overlay" aria-hidden="true"></div>
 
   <div class="page">
     <div class="container">
 
+      <!-- HEADER -->
       <header class="header">
-        <div class="brand">
+
+        <a class="brand" href="#home">
           <span class="brand-badge"></span>
-          <div class="brand-text">
-            <div class="brand-name">nikunj_portfolio.exe</div>
-            <div class="brand-sub">status: online ✓</div>
-          </div>
-        </div>
+          <span class="brand-text">
+            <strong class="brand-name">nikunj_portfolio.exe</strong>
+            <small class="brand-sub">status: online</small>
+          </span>
+        </a>
 
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+        <button class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-controls="main-nav"
+          aria-expanded="false">
+          &#9776;
+        </button>
 
-        <nav class="nav" id="main-nav">
+        <nav class="nav" id="main-nav" aria-label="Main navigation">
           <a href="#home">Home</a>
           <a href="#summary">Summary</a>
           <a href="#experience">Experience</a>
-          <a href="#portfolio">Portfolio</a>
+          <a href="#portfolio">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#certifications">Certifications</a>
           <a href="#contact">Contact</a>
         </nav>
+
       </header>
 
-      <section id="home" class="card">
-        <div class="hero">
-          <div class="hero-left">
-            <h1 class="h1">NIKUNJ MIRAJKAR</h1>
-            <p class="muted hero-sub">
-              Cloud & DevOps Engineer • AWS • Terraform • Docker • CI/CD • Linux
-            </p>
+      <main>
 
-            <div class="terminal">
-              Initializing cloud profile...<br>
-              Building infrastructure, automation, and reliable deployments.<br>
-              <strong>Location:</strong> Nottingham, UK
+        <!-- HOME -->
+        <section id="home" class="card hero-section">
+
+          <div class="hero">
+
+            <div class="hero-left">
+
+              <p class="eyebrow">
+                &gt; INITIALIZING PROFESSIONAL PROFILE
+              </p>
+
+              <h1 class="h1">NIKUNJ MIRAJKAR</h1>
+
+              <p class="hero-title">
+                Cloud Engineering | DevOps | Data Analytics
+              </p>
+
+              <p class="muted hero-sub">
+                MSc Cloud & Enterprise Computing graduate with
+                experience in infrastructure operations, cloud
+                engineering projects, data analysis and technical
+                training.
+              </p>
+
+              <div class="terminal">
+                <span class="terminal-green">$ whoami</span><br>
+                Nikunj Mirajkar<br><br>
+
+                <span class="terminal-green">$ location</span><br>
+                Nottingham, United Kingdom<br><br>
+
+                <span class="terminal-green">$ expertise</span><br>
+                AWS • Azure • Python • SQL • Terraform • Docker
+                • GitHub Actions
+              </div>
+
+              <div class="kv">
+                <span class="chip">AWS</span>
+                <span class="chip">Azure</span>
+                <span class="chip">Python</span>
+                <span class="chip">SQL</span>
+                <span class="chip">Terraform</span>
+                <span class="chip">Docker</span>
+                <span class="chip">Linux</span>
+                <span class="chip">Power BI</span>
+              </div>
+
+              <div class="cta-row">
+                <a class="neon-btn" href="#experience">
+                  View Experience
+                </a>
+                <a class="neon-btn secondary" href="#portfolio">
+                  Explore Projects
+                </a>
+                <a class="neon-btn secondary" href="#contact">
+                  Contact Me
+                </a>
+              </div>
+
             </div>
 
-            <div class="kv">
-              <div class="chip">AWS</div>
-              <div class="chip">Terraform</div>
-              <div class="chip">Docker</div>
-              <div class="chip">GitHub Actions</div>
-              <div class="chip">Linux</div>
-              <div class="chip">Python</div>
-              <div class="chip">Azure (AZ-900)</div>
+            <div class="hero-right">
+              <div class="profile-frame">
+                <img
+                  class="hero-image"
+                  src="img/profile.jpg"
+                  alt="Nikunj Mirajkar"
+                  width="360"
+                  height="420"
+                  fetchpriority="high">
+              </div>
             </div>
 
-            <div class="cta-row">
-              <a class="neon-btn" href="#portfolio">View Portfolio</a>
-              <a class="neon-btn" href="#contact">Contact</a>
-            </div>
           </div>
+        </section>
 
-          <div class="hero-right">
-            <img class="hero-image" src="img/profile.jpg" alt="Nikunj Mirajkar" loading="lazy" />
-          </div>
-        </div>
-      </section>
+        <!-- SUMMARY -->
+        <section id="summary" class="card">
 
-      <section id="summary" class="card">
-        <h2 class="h2">Summary</h2>
+          <h2 class="h2">Professional Summary</h2>
 
-        <div class="terminal">
-          Cloud & DevOps Engineer with hands-on experience supporting AWS infrastructure, managing Linux servers, and deploying containerized applications using Docker. Experienced in monitoring system health, troubleshooting infrastructure incidents, and maintaining reliable cloud environments. Strong interest in automation, system reliability, and scalable cloud operations.
-        </div>
-      </section>
-
-      <section id="experience" class="card">
-        <h2 class="h2">Experience</h2>
-
-        <div class="exp-grid">
-          <div class="card soft exp-card">
-            <h3 class="h3">Junior Cloud Engineer — Cloud Infrastructure Lab</h3>
-            <div class="muted">Jan 2026 – Present • Remote</div>
-
-            <div class="terminal exp-body">
-              <ul class="list exp-list">
-                <li>Supported AWS cloud infrastructure to maintain availability and performance of enterprise applications.</li>
-                <li>Managed and troubleshot Linux servers using command-line tools and log analysis.</li>
-                <li>Assisted with Docker container deployments for development and testing environments.</li>
-                <li>Monitored system health, uptime, and application performance using monitoring dashboards.</li>
-                <li>Investigated infrastructure incidents and performed incident triage and troubleshooting.</li>
-                <li>Collaborated with engineering teams on cloud deployments and environment configuration.</li>
-                <li>Applied system updates, patches, and configuration changes on Linux servers.</li>
-                <li>Contributed to root cause analysis (RCA) to improve system reliability.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card soft exp-card">
-            <h3 class="h3">Cloud & DevOps Engineer — Hands-on Lab Environment</h3>
-            <div class="muted">Oct 2024 – Oct 2025 • Nottingham Trent University</div>
-
-            <div class="terminal exp-body">
-              <ul class="list exp-list">
-                <li>Built containerised applications using Docker and Docker Compose.</li>
-                <li>Developed RESTful backend services and implemented authentication systems.</li>
-                <li>Created microservices architecture to improve scalability.</li>
-                <li>Implemented CI/CD pipelines to automate build and deployment workflows.</li>
-                <li>Worked extensively with Linux environments, Git version control and networking fundamentals.</li>
-                <li>Practiced deployment troubleshooting and debugging.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="card soft exp-card exp-full">
-          <h3 class="h3">Operations Support Engineer — Clean Harbors</h3>
-          <div class="muted">May 2021 – May 2023</div>
-
-          <div class="terminal exp-body">
-            <ul class="list exp-list">
-              <li>Worked in a ticket-driven operational environment using Salesforce CRM.</li>
-              <li>Performed incident triage and severity-based prioritization.</li>
-              <li>Maintained 95% SLA compliance.</li>
-              <li>Escalated production issues to engineering teams.</li>
-              <li>Conducted root cause analysis.</li>
-              <li>Maintained operational documentation.</li>
-              <li>Reduced recurring issues by analysing operational workflows.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="portfolio" class="card">
-        <h2 class="h2">Portfolio</h2>
-        <p class="muted">Auto-synced from GitHub repositories.</p>
-
-        <div id="github-status" class="muted" style="margin-top:10px">Loading GitHub repositories...</div>
-        <div id="github-repos" class="projects-grid"></div>
-      </section>
-
-      <section id="skills" class="card">
-        <h2 class="h2">Skills</h2>
-
-        <div class="kv">
-          <div class="chip">AWS</div>
-          <div class="chip">Terraform</div>
-          <div class="chip">Docker</div>
-          <div class="chip">CI/CD</div>
-          <div class="chip">GitHub Actions</div>
-          <div class="chip">Linux</div>
-          <div class="chip">Python</div>
-          <div class="chip">Java</div>
-          <div class="chip">Networking</div>
-          <div class="chip">MySQL</div>
-          <div class="chip">SQLite</div>
-          <div class="chip">MQTT</div>
-        </div>
-      </section>
-
-      <section id="certifications" class="card">
-        <h2 class="h2">Certifications</h2>
-
-        <div class="card soft">
-          <h3 class="h3">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
           <div class="terminal">
-            Issued 2025<br><br>
-            <a class="link" href="https://www.credly.com/earner/earned/badge/744eed9d-8a6a-4895-b4ea-1fd875c58ef8" target="_blank" rel="noopener">
-              View Credential on Credly
+            MSc Cloud & Enterprise Computing graduate with a
+            background in operations support, cloud infrastructure,
+            automation and data analytics.
+
+            Experienced in incident investigation, operational
+            reporting, troubleshooting and stakeholder communication.
+
+            Developed practical projects using AWS, Terraform,
+            Docker, Python, PostgreSQL, FastAPI and GitHub Actions.
+          </div>
+
+          <div class="grid-2">
+
+            <div class="card soft">
+              <h3 class="h3">Core Strengths</h3>
+
+              <ul class="list">
+                <li>Cloud infrastructure and deployment automation</li>
+                <li>Python, SQL and data analysis</li>
+                <li>Incident troubleshooting and root cause analysis</li>
+                <li>CI/CD pipelines and containerization</li>
+                <li>Technical training and documentation</li>
+              </ul>
+            </div>
+
+            <div class="card soft">
+              <h3 class="h3">Professional Highlights</h3>
+
+              <ul class="list">
+                <li>MSc Cloud & Enterprise Computing — Commendation</li>
+                <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
+                <li>40+ weekly incidents and requests supported at Clean Harbors</li>
+                <li>95%+ SLA performance in operations support</li>
+                <li>Hands-on AWS, DevOps and analytics portfolio</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="card">
+
+          <h2 class="h2">Professional Experience</h2>
+
+          <p class="muted section-intro">
+            Cloud Engineering • Data Analytics • Technical Training
+          </p>
+
+          <div class="experience-grid">
+
+            <!-- CLOUD ENGINEER -->
+            <article class="card soft experience-card">
+
+              <span class="experience-badge">Present</span>
+
+              <h3 class="h3">
+                Cloud Engineer | Personal Cloud Infrastructure Lab
+              </h3>
+
+              <p class="muted">Personal Project • Self-employed</p>
+
+              <p class="experience-date">
+                Jan 2026 – Present • Nottingham, UK • Remote
+              </p>
+
+              <ul class="list">
+                <li>Analyzed warehouse datasets using SQL and Python to compare performance across training status, work zones and experience levels, translating findings into recommendations.</li>
+                <li>Created Python charts and analytical summaries to communicate trends, highlight differences between groups and explain key findings.</li>
+                <li>Built PostgreSQL and PostGIS databases to store, query and analyze structured and geospatial data.</li>
+                <li>Developed FastAPI endpoints to retrieve data, calculate location-based insights and provide analytical results to frontend applications.</li>
+                <li>Deployed applications on AWS EC2 using Ubuntu, configuring networking and application access.</li>
+                <li>Containerized applications and databases using Docker and Docker Compose to create consistent, reproducible development environments.</li>
+                <li>Implemented GitHub Actions pipelines to automate application builds and deployments, with Nginx configured for request routing.</li>
+                <li>Used application logs and health checks to investigate deployment issues and verify service availability.</li>
+              </ul>
+
+            </article>
+
+            <!-- TRAINING INSTRUCTOR -->
+            <article class="card soft experience-card">
+
+              <span class="experience-badge">Present</span>
+
+              <h3 class="h3">Training Instructor</h3>
+
+              <p class="muted">Frasers Group • Full-time</p>
+
+              <p class="experience-date">
+                Oct 2025 – Present • United Kingdom • On-site
+              </p>
+
+              <ul class="list">
+                <li>Deliver structured onboarding and practical training, using trainee progress and feedback to adapt coaching to individual learning needs.</li>
+                <li>Monitor training completion, assessment outcomes and skill development to identify colleagues requiring additional support.</li>
+                <li>Maintain accurate training records, ensuring progress updates and completed assessments are documented consistently.</li>
+                <li>Review training results to identify recurring knowledge gaps, common errors and areas requiring refresher sessions.</li>
+                <li>Summarize trainee progress and development needs for team leaders, helping prioritize coaching and follow-up training.</li>
+                <li>Combine trainee feedback with practical observations to improve training materials, instructions and delivery methods.</li>
+                <li>Work with supervisors to review training effectiveness and recommend improvements that support safe, accurate and consistent working practices.</li>
+              </ul>
+
+            </article>
+
+            <!-- CLOUD & DEVOPS LAB -->
+            <article class="card soft experience-card">
+
+              <h3 class="h3">
+                Cloud & DevOps Engineer | Hands-on Lab Environment
+              </h3>
+
+              <p class="muted">
+                Nottingham Trent University • Academic Projects
+              </p>
+
+              <p class="experience-date">
+                Oct 2024 – Oct 2025 • Nottingham, UK • On-site
+              </p>
+
+              <ul class="list">
+                <li>Combined data analysis and cloud computing in an academic project, preparing datasets, migrating data and validating results in a cloud-hosted database.</li>
+                <li>Used SQL to extract, join and aggregate data, creating structured datasets for analysis and reporting.</li>
+                <li>Cleaned and transformed datasets, resolving duplicates, missing values and inconsistent formats before migration.</li>
+                <li>Mapped database schemas and validated record counts, data types and relationships to check migration completeness and accuracy.</li>
+                <li>Analyzed cloud-hosted data to identify trends, patterns and anomalies, presenting findings through charts and analytical summaries.</li>
+                <li>Investigated database connectivity, configuration and data quality issues affecting migration and analysis.</li>
+                <li>Documented the cloud architecture, data preparation steps, SQL queries and validation results to make the project reproducible.</li>
+              </ul>
+
+            </article>
+
+            <!-- CLEAN HARBORS -->
+            <article class="card soft experience-card">
+
+              <h3 class="h3">Data Analyst</h3>
+
+              <p class="muted">Clean Harbors • Full-time</p>
+
+              <p class="experience-date">
+                May 2021 – May 2023 • Pune, India • On-site
+              </p>
+
+              <ul class="list">
+                <li>Developed interactive Power BI dashboards to track business KPIs, highlight performance trends and help stakeholders investigate changes through filters and drill-through views.</li>
+                <li>Wrote SQL queries using joins, aggregations and subqueries to combine datasets and prepare accurate data for analysis and reporting.</li>
+                <li>Used Power Query to clean, transform and consolidate data, creating repeatable preparation workflows for recurring reports.</li>
+                <li>Built Power BI data models and DAX measures to calculate KPIs, percentage changes and period comparisons consistently across dashboards.</li>
+                <li>Used Excel PivotTables, lookup functions and formulas to reconcile datasets, validate calculations and investigate reporting discrepancies.</li>
+                <li>Analyzed trends and anomalies, translating findings into clear visualizations and recommendations for stakeholders.</li>
+                <li>Gathered business requirements, agreed KPI definitions and developed reports that answered specific stakeholder questions.</li>
+                <li>Documented data sources, transformation logic and validation checks to support accurate and reproducible reporting.</li>
+              </ul>
+
+            </article>
+
+          </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="card">
+
+          <h2 class="h2">Technical Projects</h2>
+
+          <p class="muted section-intro">
+            Practical cloud infrastructure, DevOps automation,
+            backend development and data analytics projects.
+          </p>
+
+          <div class="projects-grid">
+
+            <article class="card soft project">
+
+              <h3 class="h3">
+                Cloud-Based Geospatial Infrastructure Monitoring
+              </h3>
+
+              <p class="muted">
+                Infrastructure monitoring platform using FastAPI,
+                PostgreSQL, PostGIS, Docker and Leaflet.
+              </p>
+
+              <div class="kv">
+                <span class="chip">Python</span>
+                <span class="chip">PostGIS</span>
+                <span class="chip">Docker</span>
+                <span class="chip">FastAPI</span>
+              </div>
+
+              <a class="link"
+                href="https://github.com/NikMir15/Cloud-Based-Geospatial-Infrastructure-Monitoring-System"
+                target="_blank" rel="noopener noreferrer">
+                View GitHub Repository →
+              </a>
+
+            </article>
+
+            <article class="card soft project">
+
+              <h3 class="h3">Warehouse Operations Analytics</h3>
+
+              <p class="muted">
+                SQL and Python analytics exploring warehouse
+                performance, training outcomes and operational trends.
+              </p>
+
+              <div class="kv">
+                <span class="chip">SQL</span>
+                <span class="chip">Python</span>
+                <span class="chip">Analytics</span>
+              </div>
+
+              <a class="link"
+                href="https://github.com/NikMir15/Warehouse-Operations-Analytics"
+                target="_blank" rel="noopener noreferrer">
+                View GitHub Repository →
+              </a>
+
+            </article>
+
+            <article class="card soft project">
+
+              <h3 class="h3">DevOps Docker AWS Deployment</h3>
+
+              <p class="muted">
+                Automated application deployment to AWS EC2 using
+                Docker, GitHub Actions and Nginx.
+              </p>
+
+              <div class="kv">
+                <span class="chip">AWS EC2</span>
+                <span class="chip">Docker</span>
+                <span class="chip">CI/CD</span>
+              </div>
+
+              <a class="link"
+                href="https://github.com/NikMir15/DevOps-Docker-AWS-Deployment"
+                target="_blank" rel="noopener noreferrer">
+                View GitHub Repository →
+              </a>
+
+            </article>
+
+            <article class="card soft project">
+
+              <h3 class="h3">Terraform AWS Infrastructure Lab</h3>
+
+              <p class="muted">
+                Infrastructure as Code project provisioning AWS
+                networking, EC2 and security configurations.
+              </p>
+
+              <div class="kv">
+                <span class="chip">Terraform</span>
+                <span class="chip">AWS</span>
+                <span class="chip">Linux</span>
+              </div>
+
+              <a class="link"
+                href="https://github.com/NikMir15/Terraform-AWS-VPC-EC2-Nginx-lab-with-IP-restricted-SSH"
+                target="_blank" rel="noopener noreferrer">
+                View GitHub Repository →
+              </a>
+
+            </article>
+
+            <article class="card soft project">
+
+              <h3 class="h3">Python Radio Astronomy Data Analysis</h3>
+
+              <p class="muted">
+                Python-based scientific data analysis project
+                exploring radio astronomy datasets and workflows.
+              </p>
+
+              <div class="kv">
+                <span class="chip">Python</span>
+                <span class="chip">Data Analysis</span>
+                <span class="chip">Astronomy</span>
+              </div>
+
+              <a class="link"
+                href="https://github.com/NikMir15/Python-Radio-Astronomy-Data-Analysis"
+                target="_blank" rel="noopener noreferrer">
+                View GitHub Repository →
+              </a>
+
+            </article>
+
+            <article class="card soft project">
+
+              <h3 class="h3">Log Monitoring Dashboard</h3>
+
+              <p class="muted">
+                Log monitoring and observability project using
+                Elasticsearch, Logstash and Kibana.
+              </p>
+
+              <div class="kv">
+                <span class="chip">ELK</span>
+                <span class="chip">Monitoring</span>
+                <span class="chip">Linux</span>
+              </div>
+
+              <a class="link"
+                href="https://github.com/NikMir15/Log-Monitoring-Dashboard"
+                target="_blank" rel="noopener noreferrer">
+                View GitHub Repository →
+              </a>
+
+            </article>
+
+          </div>
+
+          <h3 class="h3 github-heading">More GitHub Projects</h3>
+
+          <p class="muted">
+            Additional public repositories are loaded automatically.
+          </p>
+
+          <div id="github-status" class="muted" role="status">
+            Loading GitHub repositories...
+          </div>
+
+          <div id="github-repos" class="projects-grid"></div>
+
+          <div class="cta-row">
+            <a class="neon-btn secondary"
+              href="https://github.com/NikMir15"
+              target="_blank" rel="noopener noreferrer">
+              View All GitHub Repositories
             </a>
           </div>
-        </div>
-      </section>
 
-      <section id="contact" class="card">
-        <h2 class="h2">Contact</h2>
+        </section>
 
-        <div class="grid-2">
-          <div class="card soft">
-            <h3 class="h3">Email</h3>
-            <div class="terminal">
-              <a class="link" href="mailto:nikunjmir1506@gmail.com">nikunjmir1506@gmail.com</a>
-            </div>
+        <!-- SKILLS -->
+        <section id="skills" class="card">
+
+          <h2 class="h2">Technical Skills</h2>
+
+          <div class="grid-2 skills-grid">
+
+            <article class="card soft">
+              <h3 class="h3">Cloud & Infrastructure</h3>
+              <ul class="list">
+                <li>AWS: EC2, VPC, IAM, ALB, ECS, Route 53, CloudWatch</li>
+                <li>Microsoft Azure Fundamentals</li>
+                <li>Networking: TCP/IP, DNS, DHCP, NAT, Subnets</li>
+                <li>Linux Server Administration</li>
+              </ul>
+            </article>
+
+            <article class="card soft">
+              <h3 class="h3">DevOps & Automation</h3>
+              <ul class="list">
+                <li>Terraform Infrastructure as Code</li>
+                <li>Docker and Docker Compose</li>
+                <li>GitHub Actions CI/CD</li>
+                <li>Kubernetes Fundamentals</li>
+                <li>Git, GitHub and Bash Scripting</li>
+              </ul>
+            </article>
+
+            <article class="card soft">
+              <h3 class="h3">Programming & Backend</h3>
+              <ul class="list">
+                <li>Python</li>
+                <li>SQL</li>
+                <li>FastAPI and REST APIs</li>
+                <li>JavaScript</li>
+                <li>Shell Scripting</li>
+              </ul>
+            </article>
+
+            <article class="card soft">
+              <h3 class="h3">Data Analytics</h3>
+              <ul class="list">
+                <li>SQL Data Analysis</li>
+                <li>Python Data Processing and Visualization</li>
+                <li>Power BI, Power Query and DAX</li>
+                <li>Excel PivotTables and Data Validation</li>
+                <li>PostgreSQL, PostGIS and MySQL</li>
+              </ul>
+            </article>
+
+            <article class="card soft">
+              <h3 class="h3">Monitoring & Reliability</h3>
+              <ul class="list">
+                <li>Amazon CloudWatch</li>
+                <li>ELK Stack</li>
+                <li>Log Analysis and Troubleshooting</li>
+                <li>Incident Triage and Root Cause Analysis</li>
+                <li>System Health Monitoring</li>
+              </ul>
+            </article>
+
+            <article class="card soft">
+              <h3 class="h3">Professional Skills</h3>
+              <ul class="list">
+                <li>Technical Training and Coaching</li>
+                <li>Incident Management and SLA Awareness</li>
+                <li>Technical Documentation</li>
+                <li>Stakeholder Communication</li>
+                <li>Continuous Process Improvement</li>
+              </ul>
+            </article>
+
           </div>
 
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="card">
+
+          <h2 class="h2">Certifications</h2>
+
           <div class="card soft">
-            <h3 class="h3">LinkedIn</h3>
-            <div class="terminal">
-              <a class="link" href="https://linkedin.com/in/nikunjmirajkar" target="_blank" rel="noopener">
+
+            <h3 class="h3">
+              Microsoft Certified: Azure Fundamentals (AZ-900)
+            </h3>
+
+            <p class="muted">
+              Microsoft • Cloud Computing Fundamentals
+            </p>
+
+            <div class="cta-row">
+              <a class="neon-btn"
+                href="https://www.credly.com/earner/earned/badge/744eed9d-8a6a-4895-b4ea-1fd875c58ef8"
+                target="_blank" rel="noopener noreferrer">
+                Verify Credential on Credly
+              </a>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="card">
+
+          <h2 class="h2">Contact</h2>
+
+          <p class="muted section-intro">
+            Open to opportunities in Cloud Engineering,
+            DevOps, Infrastructure Support and Data Analytics.
+          </p>
+
+          <div class="grid-2">
+
+            <div class="card soft">
+              <h3 class="h3">Email</h3>
+              <a class="link"
+                href="mailto:nikunjmir1506@gmail.com">
+                nikunjmir1506@gmail.com
+              </a>
+            </div>
+
+            <div class="card soft">
+              <h3 class="h3">LinkedIn</h3>
+              <a class="link"
+                href="https://www.linkedin.com/in/nikunjmirajkar/"
+                target="_blank" rel="noopener noreferrer">
                 linkedin.com/in/nikunjmirajkar
               </a>
             </div>
-          </div>
 
-          <div class="card soft">
-            <h3 class="h3">GitHub</h3>
-            <div class="terminal">
-              <a class="link" href="https://github.com/NikMir15" target="_blank" rel="noopener">
+            <div class="card soft">
+              <h3 class="h3">GitHub</h3>
+              <a class="link"
+                href="https://github.com/NikMir15"
+                target="_blank" rel="noopener noreferrer">
                 github.com/NikMir15
               </a>
             </div>
+
+            <div class="card soft">
+              <h3 class="h3">Location</h3>
+              <p>Nottingham, United Kingdom</p>
+            </div>
+
           </div>
 
-          <div class="card soft">
-            <h3 class="h3">Location</h3>
-            <div class="terminal">Nottingham, United Kingdom</div>
+          <div class="cta-row">
+            <a class="neon-btn" href="mailto:nikunjmir1506@gmail.com">
+              Get in Touch
+            </a>
+
+            <a class="neon-btn secondary" href="#home">
+              Back to Top ↑
+            </a>
           </div>
-        </div>
-      </section>
+
+        </section>
+
+      </main>
 
       <footer class="footer">
-        <div class="muted">© <span id="year"></span> Nikunj Mirajkar</div>
+        <p>© <span id="year"></span> Nikunj Mirajkar</p>
       </footer>
 
     </div>
   </div>
 
-  <script src="js/main.js"></script>
-  <script src="js/github-projects.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/github-projects.js" defer></script>
+
 </body>
 </html>

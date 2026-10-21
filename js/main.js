@@ -1,117 +1,147 @@
-(() => {
-  // Year
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Mobile nav toggle
+"use strict";
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // COPYRIGHT YEAR
+  const year = document.getElementById("year");
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+  // MOBILE NAVIGATION
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.getElementById("main-nav");
+
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("open");
       toggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Close nav after click (mobile)
-    nav.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
         nav.classList.remove("open");
         toggle.setAttribute("aria-expanded", "false");
       });
     });
   }
 
-  // Smooth scroll (native + small fallback)
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href");
-      if (!id || id === "#") return;
-      const el = document.querySelector(id);
-      if (!el) return;
-      e.preventDefault();
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      history.replaceState(null, "", id);
-    });
-  });
-
-  // MATRIX RAIN
+  // MATRIX BACKGROUND
   const canvas = document.getElementById("matrix");
   if (!canvas) return;
 
-  const ctx = canvas.getContext("2d", { alpha: false });
+  const ctx = canvas.getContext("2d");
   if (!ctx) return;
 
-  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
 
-  let w = 0, h = 0, dpr = 1;
-  let cols = 0;
-  let drops = [];
-  let fontSize = 16;
-  let speedBase = 1;
-  const chars = "アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const chars =
+    "01ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+    "アイウエオカキクケコサシスセソタチツテト";
 
-  function computeSettings() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    w = Math.floor(window.innerWidth);
-    h = Math.floor(window.innerHeight);
+  let columns = [];
+  let fontSize = 14;
+  let width = 0;
+  let height = 0;
+  let lastFrame = 0;
+  let animationId = null;
 
-    // more rain on mobile + big screens
-    const isMobile = w < 720;
-    fontSize = isMobile ? 14 : 16;
+  const frameInterval = 65;
 
-    // density tweak: smaller columnWidth => more columns
-    const colWidth = isMobile ? 12 : 14;
+  function resizeCanvas() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-    canvas.width = Math.floor(w * dpr);
-    canvas.height = Math.floor(h * dpr);
-    canvas.style.width = w + "px";
-    canvas.style.height = h + "px";
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
 
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.font = `${fontSize}px ui-monospace, Menlo, Consolas, monospace`;
 
-    cols = Math.floor(w / colWidth);
-    drops = new Array(cols).fill(0).map(() => Math.random() * h);
+    fontSize = width < 600 ? 11 : 14;
 
-    // speed
-    speedBase = prefersReduced ? 0.6 : (isMobile ? 1.15 : 1.0);
+    const count = Math.ceil(width / fontSize);
+
+    columns = Array.from({ length: count }, () => ({
+      y: Math.random() * -height / fontSize,
+      speed: 0.35 + Math.random() * 0.7
+    }));
+
+    ctx.fillStyle = "#030b08";
+    ctx.fillRect(0, 0, width, height);
   }
 
-  function randChar() {
-    return chars[Math.floor(Math.random() * chars.length)];
-  }
+  function draw(timestamp) {
+    animationId = requestAnimationFrame(draw);
 
-  // Subtle tuning: slower fade => softer look, but not heavy
-  function draw() {
-    // fade
-    ctx.fillStyle = "rgba(0, 0, 0, 0.07)";
-    ctx.fillRect(0, 0, w, h);
+    if (timestamp - lastFrame < frameInterval) return;
 
-    for (let i = 0; i < cols; i++) {
-      const x = i * (w / cols);
-      const y = drops[i];
+    lastFrame = timestamp;
 
-      // green glow
-      ctx.fillStyle = "rgba(0, 255, 120, 0.85)";
-      ctx.fillText(randChar(), x, y);
+    ctx.fillStyle = "rgba(0, 8, 4, 0.075)";
+    ctx.fillRect(0, 0, width, height);
 
-      // drop update
-      drops[i] = y + fontSize * speedBase;
+    ctx.font = fontSize + "px monospace";
 
-      // reset
-      if (drops[i] > h + 20 && Math.random() > 0.975) {
-        drops[i] = -Math.random() * 120;
+    columns.forEach((column, index) => {
+      const character = chars.charAt(
+        Math.floor(Math.random() * chars.length)
+      );
+
+      const x = index * fontSize;
+      const y = column.y * fontSize;
+
+      ctx.fillStyle = Math.random() > 0.985
+        ? "#9affc6"
+        : "#008d45";
+
+      ctx.fillText(character, x, y);
+
+      column.y += column.speed;
+
+      if (y > height && Math.random() > 0.975) {
+        column.y = -Math.random() * 30;
       }
+    });
+  }
+
+  function startMatrix() {
+    if (animationId !== null) {
+      cancelAnimationFrame(animationId);
+      animationId = null;
     }
 
-    requestAnimationFrame(draw);
+    resizeCanvas();
+
+    if (!reducedMotion.matches) {
+      animationId = requestAnimationFrame(draw);
+    }
   }
 
-  computeSettings();
-  window.addEventListener("resize", () => {
-    computeSettings();
-  }, { passive: true });
+  window.addEventListener("resize", startMatrix);
 
-  // Start
-  requestAnimationFrame(draw);
-})();
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      if (animationId !== null) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+    } else {
+      startMatrix();
+    }
+  });
+
+  if (reducedMotion.addEventListener) {
+    reducedMotion.addEventListener("change", startMatrix);
+  }
+
+  startMatrix();
+});
